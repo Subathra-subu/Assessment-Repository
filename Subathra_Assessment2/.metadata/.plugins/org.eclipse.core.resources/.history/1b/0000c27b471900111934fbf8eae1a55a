@@ -1,0 +1,10 @@
+package assessment_Q_2;
+
+public class ClothingProduct extends Product {
+
+	private String size;
+	private String material;
+	
+	
+
+}

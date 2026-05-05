@@ -1,0 +1,30 @@
+package assessment_Q_2;
+
+import java.util.Scanner;
+
+public class ProductMain {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int choice=0;
+		
+		do{
+			System.out.println("SELECT THE OPTION BELOW:"
+					+ "\n1.PRODUCT DETAILS"
+					+ "\n2.CLOTHING DETAILS");
+			
+			choice = sc.nextInt();
+			
+			switch(choice) {
+			
+			case 1:
+				
+			}
+			
+		}while(choice != 3);
+
+	}
+
+}

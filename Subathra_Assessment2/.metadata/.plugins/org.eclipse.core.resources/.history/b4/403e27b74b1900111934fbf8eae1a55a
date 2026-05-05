@@ -1,0 +1,84 @@
+package assessment_Q_3;
+
+public class Employee {
+
+	private int employee_id;
+	private String employee_name;
+	private String desgination;
+	private double salary;
+	
+	public Employee(int employee_id, String employee_name, String desgination, double salary) {
+		this.employee_id = employee_id;
+		this.employee_name = employee_name;
+		this.desgination = desgination;
+		this.salary = salary;
+	}
+	
+	
+	
+	
+	public int getEmployee_id() {
+		return employee_id;
+	}
+
+
+
+
+	public String getEmployee_name() {
+		return employee_name;
+	}
+
+
+
+
+	public String getDesgination() {
+		return desgination;
+	}
+
+
+
+
+	public double getSalary() {
+		return salary;
+	}
+
+
+
+
+	public void setEmployee_id(int employee_id) {
+		this.employee_id = employee_id;
+	}
+
+
+
+
+	public void setEmployee_name(String employee_name) {
+		this.employee_name = employee_name;
+	}
+
+
+
+
+	public void setDesgination(String desgination) {
+		this.desgination = desgination;
+	}
+
+
+
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+
+
+
+	public String displayInfo() {
+		return "\nEMPLOYEE DETAILS:"
+				+ "\nEmployee ID: "+getEmployee_Id()+"\nProduct_Name: "
+				+getProductName()+"\nPrice: "+getPrice()+"\nWarranty Period: "+
+				getWarrantyPeriod()+" Months";
+	}
+	
+	
+}

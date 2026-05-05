@@ -1,0 +1,29 @@
+package assessment_Q_2;
+
+public class ClothingProduct extends Product {
+
+	private String size;
+	private String material;
+	
+	public ClothingProduct(int productId, String productName, double price, String size, String material) {
+		super(productId, productName, price);
+		this.size = size;
+		this.material = material;
+	}
+
+	public String getSize() {
+		return size;
+	}
+
+	public String getMaterial() {
+		return material;
+	}
+
+	public String displayInfo() {
+		return "\nCLOTHING PRODUCT INFORMATION:"
+				+ "\nProduct_Id: "+getProductId()+"\nProduct_Name: "
+				+getProductName()+"\nPrice: "+getPrice()+"\nSize: "+
+				getSize()+"\nMaterial: "+getMaterial();
+	}
+	
+}

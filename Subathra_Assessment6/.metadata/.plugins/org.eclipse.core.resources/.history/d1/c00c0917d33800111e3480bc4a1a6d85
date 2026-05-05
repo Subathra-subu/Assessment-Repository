@@ -1,0 +1,97 @@
+package selenium;
+
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class AutomationTesting {
+
+	public static void main(String[] args) {
+		//Login to the Application
+		
+				WebDriver driver = new ChromeDriver();
+				
+				driver.manage().window().maximize();
+				
+				driver.get("https://www.demoblaze.com/");
+				
+				WebElement Login_Link = driver.findElement(By.id("login2"));
+				
+				Login_Link.click();
+				
+				WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+				
+				WebElement userName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='loginusername']")));
+				
+				userName.sendKeys("admin");
+				
+				WebElement Password = driver.findElement(By.cssSelector("input#loginpassword"));
+				
+				Password.sendKeys("admin");
+				
+				WebElement Login_Button = driver.findElement(By.xpath("//button[@onclick=\"logIn()\"]"));
+				
+				Login_Button.click();
+				
+				try {
+				    wait.until(ExpectedConditions.alertIsPresent());
+				    
+				    String alertText = driver.switchTo().alert().getText();
+				    System.out.println("Login Failed: " + alertText);
+				    
+				    driver.switchTo().alert().accept();
+				} 
+				
+				catch (Exception e) {
+				    System.out.println("Login Successful");
+				}
+				
+				//Categories Navigation and Product Handling
+				
+				Actions act = new Actions(driver);
+				
+				WebElement Laptop = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@onclick=\"byCat('notebook')\"]")));
+				
+				act.click(Laptop).perform();
+				
+				WebElement macBook = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='MacBook Pro']")));
+				
+				List<WebElement> elements = driver.findElements(By.xpath("//div[@class='col-lg-4 col-md-6 mb-4']//h4/a"));
+				
+				List<String> list = new ArrayList<>();
+				
+				for(WebElement element:elements) {
+					list.add(element.getText());
+				}
+				
+				Collections.sort(list);
+				
+				for(String laptop:list) {
+					System.out.println(laptop);
+				}
+				
+				act.moveToElement(macBook);
+				
+				//Add Product to Cart
+				
+				act.click(macBook).perform();
+				
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@onclick='addToCart(15)']"))).click();
+				
+				driver.quit();
+	
+		
+	}
+
+	
+
+}

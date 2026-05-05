@@ -1,0 +1,32 @@
+package assessment_Q_3;
+
+public class Employeement extends Employee {
+	
+	private double percentage;
+	private double bonous;
+	
+	
+
+	public Employeement(int employee_id, String employee_name, String desgination, double salary, double percentage) {
+		super(employee_id, employee_name, desgination, salary);
+		this.percentage = percentage;
+	}
+
+	public Employeement(int employee_id, String employee_name, String desgination, double salary, double percentage,
+			double bonous) {
+		super(employee_id, employee_name, desgination, salary);
+		this.percentage = percentage;
+		this.bonous = bonous;
+	}
+
+	public double increaseSalary(double percentage) {
+		double amount = getSalary()+((getSalary()*percentage)/100);
+		return amount;
+	}
+	
+	public double increaseSalary(double percentage,double bonus) {
+		double amount = getSalary()+((getSalary()*percentage)/100)+bonus;
+		return amount;
+	}
+
+}

@@ -1,0 +1,5 @@
+#Mon Apr 06 19:57:36 IST 2026
+__DEFAULT__=false
+expression=maven
+org.eclipse.help.ui.localSearch.master=true
+org.eclipse.sdk.Eclipse.master=true

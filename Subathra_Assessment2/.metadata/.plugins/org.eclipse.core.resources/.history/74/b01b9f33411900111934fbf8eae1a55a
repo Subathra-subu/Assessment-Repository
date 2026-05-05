@@ -1,0 +1,12 @@
+package assessment_Q_1;
+
+public class CustomerMain {
+
+	public static void main(String[] args) {
+		
+		Customer customer = new Customer();
+		
+		
+	}
+
+}

@@ -1,0 +1,142 @@
+package selenium;
+
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class AutomationTesting {
+
+	public static void main(String[] args) {
+		
+		//Login to the Application
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.get("https://www.demoblaze.com/");
+		
+		WebElement Login_Link = driver.findElement(By.id("login2"));
+		
+		Login_Link.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		
+		WebElement userName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='loginusername']")));
+		
+		userName.sendKeys("admin");
+		
+		WebElement Password = driver.findElement(By.cssSelector("input#loginpassword"));
+		
+		Password.sendKeys("admin");
+		
+		WebElement Login_Button = driver.findElement(By.xpath("//a[text()='Laptops']"));
+		
+		Login_Button.click();
+		
+		try {
+		    wait.until(ExpectedConditions.alertIsPresent());
+		    
+		    String alertText = driver.switchTo().alert().getText();
+		    System.out.println("Login Failed: " + alertText);
+		    
+		    driver.switchTo().alert().accept();
+		} 
+		
+		catch (Exception e) {
+		    System.out.println("Login Successful");
+		}
+		
+		//Categories Navigation and Product Handling
+		
+		Actions act = new Actions(driver);
+		
+		WebElement Laptop = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@onclick=byCat('notebook')]")));
+		
+		act.click(Laptop).perform();
+		
+		WebElement macBook = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='MacBook Pro']")));
+		
+		List<WebElement> elements = driver.findElements(By.xpath("//div[@class='col-lg-4 col-md-6 mb-4']//h4/a"));
+		
+		List<String> list = new ArrayList<>();
+		
+		for(WebElement element:elements) {
+			list.add(element.getText());
+		}
+		
+		Collections.sort(list);
+		
+		for(String laptop:list) {
+			System.out.println(laptop);
+		}
+		
+		act.moveToElement(macBook);
+		
+		//Add Product to Cart
+		
+		act.click(macBook).perform();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@onclick='addToCart(15)']"))).click();
+		
+		wait.until(ExpectedConditions.alertIsPresent());
+		
+		System.out.println(driver.switchTo().alert().getText());
+		
+		driver.switchTo().alert().accept();
+		
+		driver.navigate().to("https://www.demoblaze.com/cart.html#");
+		
+		WebElement title = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//tbody[@id='tbodyid']//tr/td[2]")));
+
+		WebElement price = driver.findElement(By.xpath("//tbody[@id='tbodyid']//tr/td[3]"));
+
+		String productTitle = title.getText();
+		String productPrice = price.getText();
+
+		System.out.println("Product Title: " + productTitle);
+		System.out.println("Product Price: " + productPrice);
+		
+		//Place Order
+		
+		driver.findElement(By.xpath("//button[text()='Place Order']")).click();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='name']"))).sendKeys("Charu");
+		
+		driver.findElement(By.xpath("//input[@id='country']")).sendKeys("India");
+		
+		driver.findElement(By.xpath("//input[@id='city']")).sendKeys("Salem");
+		
+		driver.findElement(By.xpath("//input[@id='card']")).sendKeys("1234567");
+		
+		driver.findElement(By.xpath("//input[@id='month']")).sendKeys("April");
+		
+		driver.findElement(By.xpath("//input[@id='year']")).sendKeys("2027");
+		
+		driver.findElement(By.xpath("//button[@onclick='purchaseOrder()']")).click();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='sa-icon sa-custom']/following-sibling::h2")));
+		
+		driver.findElement(By.xpath("//button[@class=\'confirm btn btn-lg btn-primary\']")).click();
+		
+		
+		
+		//lead text-muted 
+		
+		driver.quit();
+	
+		
+	}
+
+	
+
+}

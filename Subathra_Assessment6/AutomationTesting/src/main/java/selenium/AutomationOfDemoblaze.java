@@ -1,0 +1,87 @@
+package selenium;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class AutomationOfDemoblaze {
+
+	public static void main(String[] args) {
+		
+		//Login to the Application
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.get("https://www.demoblaze.com/");
+		
+		WebElement Login_Link = driver.findElement(By.id("login2"));
+		
+		Login_Link.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		
+		WebElement userName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='loginusername']")));
+		
+		userName.sendKeys("admin");
+		
+		WebElement Password = driver.findElement(By.cssSelector("input#loginpassword"));
+		
+		Password.sendKeys("admin");
+		
+		WebElement Login_Button = driver.findElement(By.xpath("//button[@onclick=\"logIn()\"]"));
+		
+		Login_Button.click();
+		
+		WebElement Logout_Button = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logout2")));
+		
+		String ExpectedMessage = "Log out";
+		
+		if(Logout_Button.getText().equals(ExpectedMessage)) {
+			System.out.println("Login Successfull");
+		}
+		else {
+			System.out.println("Login Unsuccessfull");
+		}
+		
+		//Categories Navigation and Product Handling
+		
+		Actions act = new Actions(driver);
+		
+		WebElement Laptop = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@onclick=\"byCat('notebook')\"]")));
+		
+		act.click(Laptop).perform();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='MacBook Pro']")));
+		
+		List<WebElement> elements = driver.findElements(By.xpath("//div[@class='col-lg-4 col-md-6 mb-4']"));
+		
+		
+		for(WebElement element:elements) {
+			System.out.println(element.getText().toString());
+		}
+		
+		//Add Product to Cart
+		
+		WebElement macBook = driver.findElement(By.xpath("//a[text()='MacBook Pro']"));
+		
+		act.click(macBook).perform();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@onclick='addToCart(15)']"))).click();
+		
+		
+		
+		driver.quit();
+		
+
+	}
+
+}

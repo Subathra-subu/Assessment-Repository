@@ -1,0 +1,80 @@
+package assessment_Q_1;
+
+import java.util.Scanner;
+
+public class CustomerMain {
+
+	public static void main(String[] args) { 
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("ACCOUNT DETAILS");
+		
+	    System.out.print("ACCOUNT_ID:");
+		int account_id = sc.nextInt();
+		
+		System.out.print("CUSTOMER_ID:");
+		int customer_id = sc.nextInt();
+		
+		System.out.print("CUSTOMER_NAME:");
+		String customer_name = sc.next();
+		
+		System.out.print("CUSTOMER_GENDER");
+		char gender = sc.next().charAt(0);
+		
+		System.out.print("ACCOUNT_BALANCE");
+		double balance = sc.nextDouble();
+		
+		Account account = new Account(account_id,new Customer(customer_id,customer_name,gender),balance);
+		
+		int choice=0;
+		
+		do {
+		System.out.println("\nPLEASE SELECT ONE OPTION BELOW"
+				+ "\n1.WITHDRAW"
+				+ "\n2.DEPOSIT"
+				+ "\n3.CHECKBALANCE"
+				+ "\n4.EXIT");
+		
+		System.out.print("OPTION:");
+		choice = sc.nextInt();
+		
+		switch(choice) {
+		
+		case 1:
+			
+			System.out.print("ENTER THE AMOUNT TO WITHDRAW:");
+			double amount_withdraw = sc.nextDouble();
+			
+			account.withDraw(amount_withdraw);
+			
+			break;
+		
+		case 2:
+			
+			System.out.print("ENTER THE AMOUNT TO DEPOSIT:");
+			double amount_deposit = sc.nextDouble();
+			
+			account.deposit(amount_deposit);
+			
+			break;
+			
+		case 3:
+			
+			System.out.println("CURRENT BALANCE: "+account.getBalance());
+			
+			break;
+			
+		case 4:
+			
+			System.out.println("THANK YOU FOR BANKING WITH US!!");
+			System.exit(0);
+	
+		}
+		
+		}while(choice!=4);
+		
+		sc.close();
+	}
+
+}

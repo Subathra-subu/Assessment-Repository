@@ -1,0 +1,15 @@
+package assessment_Q_3;
+
+public class Employeement extends Employee {
+	
+	public double increaseSalary(double percentage) {
+		double amount = getSalary()+((getSalary()*percentage)/100);
+		return amount;
+	}
+	
+	public double increaseSalary(double percentage,double bonus) {
+		double amount = getSalary()+((getSalary()*percentage)/100)+bonus;
+		return amount;
+	}
+
+}

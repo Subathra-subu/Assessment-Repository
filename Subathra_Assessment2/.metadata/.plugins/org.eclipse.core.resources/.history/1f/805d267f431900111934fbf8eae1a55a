@@ -1,0 +1,63 @@
+package assessment_Q_1;
+
+import java.util.Scanner;
+
+public class CustomerMain {
+
+	public static void main(String[] args) { 
+		
+		Scanner sc = new Scanner(System.in);
+		
+		Account account = new Account(901233,new Customer(3456,"PETER",'M'));
+		
+		int choice=0;
+		
+		do {
+		System.out.println("\nPLEASE SELECT ONE OPTION BELOW"
+				+ "1.WITHDRAW"
+				+ "2.DEPOSIT"
+				+ "3.CHECKBALANCE"
+				+ "4.EXIT");
+		
+		System.out.print("OPTION:");
+		choice = sc.nextInt();
+		
+		switch(choice) {
+		
+		case 1:
+			
+			System.out.print("ENTER THE AMOUNT TO WITHDRAW:");
+			double amount_withdraw = sc.nextDouble();
+			
+			account.withDraw(amount_withdraw);
+			
+			break;
+		
+		case 2:
+			
+			System.out.print("ENTER THE AMOUNT TO DEPOSIT:");
+			double amount_deposit = sc.nextDouble();
+			
+			account.deposit(amount_deposit);
+			
+			break;
+			
+		case 3:
+			
+			System.out.println("CURRENT BALANCE: "+account.getBalance());
+			
+			break;
+			
+		case 4:
+			
+			System.out.println("THANK YOU FOR BANKING WITH US!!");
+			System.exit(0);
+	
+		}
+		
+		}while(choice!=4);
+		
+		sc.close();
+	}
+
+}
