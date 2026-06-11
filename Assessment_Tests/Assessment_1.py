@@ -69,20 +69,20 @@ continue_shop = driver.find_element(By.XPATH,"//button[text()='Continue Shopping
 driver.execute_script("arguments[0].click();",continue_shop)
 
 cart = driver.find_element(By.XPATH,"//a[text()=' Cart']")
-actions.move_to_element(cart)
-driver.execute_script("arguments[0].click();",continue_shop)
+driver.execute_script("arguments[0].click();", cart)
 
 cart_title = driver.find_element(By.XPATH,"//li[text()='Shopping Cart']")
 wait.until(EC.visibility_of(cart_title))
 assert cart_title.text == "Shopping Cart"
 
-driver.find_element(By.XPATH,"//a[text()='Proceed To Checkout']").click()
+wait.until(EC.element_to_be_clickable((By.XPATH, "//a[text()='Proceed To Checkout']"))).click()
 
 wait.until(EC.visibility_of_element_located(By.XPATH,"//h2[text()='Address Details']"))
 
-address1 = driver.find_elements(By.XPATH,"(//li[@class='address_firstname address_lastname'])[1]/following-sibling::*").text
+address1 = driver.find_elements( By.XPATH,"(//li[@class='address_firstname address_lastname'])[1]/following-sibling::*")
 
-print(address1)
+for item in address1:
+    print(item.text)
 
 count=0
 for i in address1:
@@ -91,8 +91,8 @@ for i in address1:
 
 address2 = driver.find_elements(By.XPATH,"(//li[@class='address_firstname address_lastname'])[2]/following-sibling::*")
 
-for i,j in address1,address2:
-    assert i==j
+for i, j in zip(address1, address2):
+    assert i.text == j.text
 
 
 driver.find_element(By.XPATH,"//a[text()=' Delete Account']").click()
