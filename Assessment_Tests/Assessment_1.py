@@ -24,8 +24,8 @@ driver.find_element(By.XPATH,"//form[@action='/signup']/child::input[3]").send_k
 signup = driver.find_element(By.XPATH,"//form[@action='/signup']/child::button")
 driver.execute_script("arguments[0].click();", signup)
 
-gender = driver.find_element(By.XPATH,"//input[@id='id_gender1']")
-wait.until(EC.visibility_of(gender))
+gender = wait.until(EC.element_to_be_clickable((By.ID, "id_gender1")))
+gender.click()
 gender.click()
 
 driver.find_element(By.XPATH,"//input[@id='password']").send_keys(123456)
