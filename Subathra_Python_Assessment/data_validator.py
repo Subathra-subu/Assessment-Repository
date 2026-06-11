@@ -7,10 +7,10 @@ def validate_email(email):
     re.match("^[a-zA-z0-9]@[a-zA-z].[a-zA-Z0-9],{2,5}")
 
 def validate_phone(phone):
-    res = re.search("^[6-9],{10,}")
+    res = re.search(r"^[6-9]/d{9}")
 
 def validate_usn(usn):
-    res = re.search("^[25MCA]/d,{3,}")
+    res = re.search(r"^[25MCA]/d{3}")
 
 try:
 
