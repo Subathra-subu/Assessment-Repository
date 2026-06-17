@@ -23,7 +23,7 @@ class Testcases:
     @pytest.mark.regression  
     def test_case03(self):
         html_book = self.driver.find_element(By.XPATH,"//a[text()='HTML']");
-        html_book.click()
+        self.driver.execute_script("arguments[0].click();",html_book)
         books = self.driver.find_elements(By.XPATH,"//ul[@class='products masonry-done']/child::*");
         print("The number of books displayed after filtering",len(books))
         assert len(books)==3
