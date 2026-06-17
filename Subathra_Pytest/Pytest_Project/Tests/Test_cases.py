@@ -17,7 +17,7 @@ class Testcases:
     @pytest.mark.smoke
     def test_case02(self):
         JS_book = self.driver.find_element(By.XPATH,"//h3[text()='JS Data Structures and Algorithm']")
-        JS_book.click()
+        self.driver.execute_script("arguments[0].click();",JS_book)
         assert self.driver.title == "JS Data Structures and Algorithm – Automation Practice Site"
         
     @pytest.mark.regression  
@@ -32,8 +32,7 @@ class Testcases:
     def test_case04(self):
         drop_down = self.driver.find_element(By.XPATH,"//select[@class='orderby']")
         drop_down.click()
-        low_to_high = self.driver.find_element(By.XPATH,"//select[@class='orderby']/child::option[5]")
-        low_to_high.click()
+        drop_down.select_by_visible_text("Sort by price: low to high")
         price_list = self.driver.find_elements(By.XPATH,"//ul[@class='products masonry-done']/child::*/child::a/child::span/descendant::span[@class='woocommerce-Price-amount amount']")
         for i in range(1,len(price_list)):
             if price_list[i-1].text < price_list[i].text:
