@@ -41,6 +41,6 @@ driver.find_element(By.XPATH,"//table//tr[8]//td/input").send_keys(123456789)
 driver.find_element(By.XPATH,"//table//tr[9]//td/input").send_keys(1234)
 driver.find_element(By.XPATH,"//table//tr[11]//td/input").send_keys(12)
 
-driver.find_element(By.XPATH,//input[@type='button']).click()
+driver.find_element(By.XPATH,"//input[@type='button']").click()
 
 assert driver.find_element(By.XPATH,"//h1[text()='Bill Payment Complete']").is_displayed()

@@ -17,7 +17,6 @@ assert driver.title=="Automation Exercise"
 print("Home page is displayed")
 
 end = driver.find_element(By.XPATH,"//div[@class='footer-bottom']")
-# driver.execute_script("arguments[0].scrollIntoView(true);", end)
 actions.move_to_element(end).perform()
 
 assert driver.find_element(By.XPATH,"//h2[text()='Subscription']").is_displayed()
