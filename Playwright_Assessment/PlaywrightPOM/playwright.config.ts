@@ -6,7 +6,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 import dotenv from 'dotenv';
 
-const envName = process.env.ENV || 'qa';
+const envName = process.env.ENV || 'uat';
 
 dotenv.config({
 
