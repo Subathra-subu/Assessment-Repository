@@ -13,7 +13,9 @@ export const test = base.extend<fixtures>({
     accountPage:async({page},use)=>{
         await use(new AccountPage(page));
     },
-    
+    registerPage:async({page},use)=>{
+        await use(new RegisterPage(page));
+    },
 
 });
 export {expect}

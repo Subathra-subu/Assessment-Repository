@@ -11,4 +11,9 @@ export class LOginPage{
         this.email= page.locator("#input-email");
         this.password=page.locator("#input-password");
     }
+
+    async login(userEmail:string,userPassword:string){
+        this.email.fill(userEmail);
+        this.password.fill(userPassword);
+    }
 }
