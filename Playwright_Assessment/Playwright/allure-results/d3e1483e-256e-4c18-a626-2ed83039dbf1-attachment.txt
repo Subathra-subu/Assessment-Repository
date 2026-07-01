@@ -1,0 +1,5 @@
+Title: Search - Microsoft Bing
+-------------------------------------
+Current Url [Function: url]
+-------------------------------------
+Inner Text of Images link getByRole('link', { name: 'Images' })

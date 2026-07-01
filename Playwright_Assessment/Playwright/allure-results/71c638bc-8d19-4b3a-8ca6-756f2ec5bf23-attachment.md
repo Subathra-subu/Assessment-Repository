@@ -1,0 +1,853 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: PlaywrightCommands.test.ts >> Commands test
+- Location: tests\PlaywrightCommands.test.ts:6:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: apiRequestContext._wrapApiCall: file data stream has unexpected number of bytes
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - button "Skip to content" [ref=e3] [cursor=pointer]:
+      - generic [ref=e5]: Skip to content
+    - button "Accessibility Feedback" [ref=e6] [cursor=pointer]:
+      - generic [ref=e8]: Accessibility Feedback
+    - generic [ref=e9]:
+      - link "Back to Bing search" [ref=e10] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Back to Bing search" [level=1] [ref=e11]
+      - search [ref=e12]:
+        - button "Search" [ref=e15] [cursor=pointer]
+        - searchbox "Enter your search here - Search suggestions will show as you type" [ref=e16]: playwright
+        - button "Search using voice" [ref=e20] [cursor=pointer]
+        - button "Search using an image" [ref=e23] [cursor=pointer]
+        - status [ref=e25]
+    - complementary "Account Rewards and Preferences" [ref=e26]:
+      - button "Microsoft Rewards" [ref=e27] [cursor=pointer]:
+        - generic [ref=e29]:
+          - generic [ref=e30]: "3"
+          - img [ref=e32]
+      - link "Sign in" [ref=e44] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic "Sign in" [ref=e45]
+    - navigation "Search Filter" [ref=e46]:
+      - list [ref=e47]:
+        - listitem [ref=e48]:
+          - link "All" [ref=e49] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=e50]:
+          - link "Search" [ref=e51] [cursor=pointer]:
+            - /url: /copilotsearch?q=playwright&FORM=CSSCOP
+            - img [ref=e52]
+            - text: Search
+        - listitem [ref=e54]:
+          - link "Videos" [ref=e55] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=d01e03e5436f90c9d401abcf91aececdc7cf6db56379aa29bac610a5d6cfc27bJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1wbGF5d3JpZ2h0JkZPUk09SERSU0M0&ntb=1
+        - listitem [ref=e56]:
+          - link "Images" [ref=e57] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7f3499b92af9a3d5adae126b5b18662fb93bed56e23f4b4d60fe7c3861db271dJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1wbGF5d3JpZ2h0JkZPUk09SERSU0Mz&ntb=1
+        - listitem [ref=e58]:
+          - link "Maps" [ref=e59] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=98c97fc0fe9e1f7aa30f9ff505e4b2b2b0e63db7969551d6ee86594c0bdaa14dJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L21hcHM_cT1wbGF5d3JpZ2h0JkZPUk09SERSU0M2&ntb=1
+        - listitem [ref=e60]:
+          - link "News" [ref=e61] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6a7b3b4ea8cf01022cdbe970a6a9fbc80c0254f1b1792fdb67a70e81001dcec1JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L25ld3Mvc2VhcmNoP3E9cGxheXdyaWdodCZGT1JNPUhEUlNDNw&ntb=1
+        - listitem [ref=e62]:
+          - link "Copilot" [ref=e63] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=0917bc039032802454b21149da75d5aef8d08830318eea2aca6d2ac9d3aedc98JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2NoYXQ_cHJvbXB0PXBsYXl3cmlnaHQmc2VuZHF1ZXJ5PTEmRk9STT1TQ0NPRFg&ntb=1
+        - listitem [ref=e64]:
+          - button "More" [ref=e65] [cursor=pointer]:
+            - img [ref=e67]
+            - text: More
+  - main "Search Results" [ref=e70]:
+    - generic [ref=e71]:
+      - list [ref=e72]:
+        - listitem [ref=e73]:
+          - generic [ref=e75]:
+            - generic [ref=e79]:
+              - button "Like" [ref=e82] [cursor=pointer]:
+                - generic:
+                  - img
+                - generic [ref=e83]: Like
+              - button "Dislike" [ref=e86] [cursor=pointer]:
+                - generic:
+                  - img
+                - generic [ref=e87]: Dislike
+            - region "Copilot Search" [ref=e88]:
+              - generic [ref=e89]:
+                - generic [ref=e92]:
+                  - generic "Playwright End-to-end testing framework" [ref=e94]:
+                    - heading "Playwright" [level=2] [ref=e95]
+                    - generic [ref=e96]: End-to-end testing framework
+                  - tablist "Playwright End-to-end testing framework" [ref=e97]:
+                    - tab "Overview" [selected] [ref=e98] [cursor=pointer]
+                    - tab "Features" [ref=e99] [cursor=pointer]
+                    - tab "Usage" [ref=e100] [cursor=pointer]
+                    - tab "Configuration" [ref=e101] [cursor=pointer]
+                - generic [ref=e104]:
+                  - button "Click to scroll right" [ref=e105] [cursor=pointer]
+                  - list [ref=e112]:
+                    - listitem [ref=e113]:
+                      - generic [ref=e114]:
+                        - link "Playwright" [ref=e116] [cursor=pointer]:
+                          - /url: https://www.bing.com/ck/a?!&&p=b5b2676b32c3c4d6a7ae9b5d4f92818d75530726d1bf2ec81313bd3f4c3befaaJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi8&ntb=1
+                          - img "Global web icon" [ref=e120]
+                          - generic [ref=e121]:
+                            - generic [ref=e122]: Playwright
+                            - generic [ref=e125]:
+                              - text: https://
+                              - strong [ref=e126]: playwright
+                              - text: .dev
+                        - heading "Fast and reliable end-to-end testing for modern web apps | Playwright" [level=2] [ref=e127]:
+                          - link "Fast and reliable end-to-end testing for modern web apps | Playwright" [ref=e128] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=b5b2676b32c3c4d6a7ae9b5d4f92818d75530726d1bf2ec81313bd3f4c3befaaJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi8&ntb=1
+                        - list [ref=e129]:
+                          - listitem [ref=e130]:
+                            - generic [ref=e131]:
+                              - link "Playwright enables reliable web automation for testing, scripting, and AI agents. One API to drive Chromium, Firefox, and WebKit — in your tests, your scripts, and your agent …" [ref=e133] [cursor=pointer]:
+                                - /url: https://www.bing.com/ck/a?!&&p=b5b2676b32c3c4d6a7ae9b5d4f92818d75530726d1bf2ec81313bd3f4c3befaaJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi8&ntb=1
+                                - strong [ref=e134]: Playwright
+                                - text: enables reliable web automation for testing, scripting, and AI agents. One API to drive Chromium, Firefox, and WebKit — in your tests, your scripts, and your agent …
+                              - generic [ref=e135]:
+                                - generic [ref=e136]:
+                                  - generic [ref=e137]:
+                                    - link "Installation" [ref=e138] [cursor=pointer]:
+                                      - /url: https://www.bing.com/ck/a?!&&p=43860194524fb718a86b32b4a079a2d54eeefe2486492ca7da1815f3f6e84c73JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi9kb2NzL2ludHJv&ntb=1
+                                      - generic [ref=e139]: Installation
+                                    - generic [ref=e140] [cursor=pointer]: Playwright supports Chromium, WebKit and Firefox on Windows, Linux and …
+                                  - generic [ref=e141]:
+                                    - link "Java" [ref=e142] [cursor=pointer]:
+                                      - /url: https://www.bing.com/ck/a?!&&p=1cdddf17341f61792dc4cdf9816ce3b8d55cb682370698ea913a1a0030d75b9eJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi9qYXZhLw&ntb=1
+                                      - generic [ref=e143]: Java
+                                    - generic [ref=e144] [cursor=pointer]: Java - Fast and reliable end-to-end testing for modern web apps | Playwright
+                                  - generic [ref=e145]:
+                                    - link "Net" [ref=e146] [cursor=pointer]:
+                                      - /url: https://www.bing.com/ck/a?!&&p=2d8644a90eaeeceb66fb816a95992df382755008c4f1c603c5c5508c9247f777JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi9kb3RuZXQv&ntb=1
+                                      - generic [ref=e147]: Net
+                                    - generic [ref=e148] [cursor=pointer]: Net - Fast and reliable end-to-end testing for modern web apps | Playwright
+                                - generic [ref=e149]:
+                                  - generic [ref=e150]:
+                                    - link "API" [ref=e151] [cursor=pointer]:
+                                      - /url: https://www.bing.com/ck/a?!&&p=4f53abec91c32d788cc8410fba8cc7f07831f817192539d0268b87fac50fcc70JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi9kb2NzL2FwaS9jbGFzcy1wbGF5d3JpZ2h0&ntb=1
+                                      - generic [ref=e152]: API
+                                    - generic [ref=e153] [cursor=pointer]: Playwright module provides a method to launch a browser instance. The …
+                                  - generic [ref=e154]:
+                                    - link "Community" [ref=e155] [cursor=pointer]:
+                                      - /url: https://www.bing.com/ck/a?!&&p=2154bbea7769be148e111a7485e3f305683b7bd88e6bfe7057763b62a70bc3b5JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi9jb21tdW5pdHkvd2VsY29tZQ&ntb=1
+                                      - generic [ref=e156]: Community
+                                    - generic [ref=e157] [cursor=pointer]: Welcome to the Playwright Community. We are so glad to have you here. In …
+                                  - generic [ref=e158]:
+                                    - link "Python" [ref=e159] [cursor=pointer]:
+                                      - /url: https://www.bing.com/ck/a?!&&p=0e48e9b7d09c4abd4a00e36dc271602e335563a89809ff637e6f0e3f93651c3bJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi9weXRob24v&ntb=1
+                                      - generic [ref=e160]: Python
+                                    - generic [ref=e161] [cursor=pointer]: Python - Fast and reliable end-to-end testing for modern web apps | Playwright
+                    - listitem [ref=e162]:
+                      - generic [ref=e164]:
+                        - generic [ref=e165]:
+                          - link "Playwright - Wikipedia" [ref=e166] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=ba33c8eea78d70b21be389e0ef98a5093c476d31ac60228df9891d4389258440JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUGxheXdyaWdodF8oc29mdHdhcmUp&ntb=1
+                            - heading "Playwright - Wikipedia" [level=1] [ref=e167]
+                          - link "Playwright - Wikipedia" [ref=e168] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=ba33c8eea78d70b21be389e0ef98a5093c476d31ac60228df9891d4389258440JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUGxheXdyaWdodF8oc29mdHdhcmUp&ntb=1
+                            - generic [ref=e169]: End-to-end testing framework
+                            - generic [ref=e170]: Playwright is an open-source automation library for browser testing and web scraping developed by Microsoft and launched on 31 January 2020, which has since become popular among programmers and web developers....
+                            - generic [ref=e171]: See more on Wikipedia
+                        - generic [ref=e172]:
+                          - link "Playwright - Wikipedia" [ref=e173] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=ba33c8eea78d70b21be389e0ef98a5093c476d31ac60228df9891d4389258440JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUGxheXdyaWdodF8oc29mdHdhcmUp&ntb=1
+                          - generic [ref=e175]:
+                            - link "LinkedIn" [ref=e176] [cursor=pointer]:
+                              - /url: https://www.bing.com/ck/a?!&&p=73fca8f11e0e52eb9bf2baff5838af14e913297a2d96e189862e8cf892282afcJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2NvbXBhbnkvcGxheXdyaWdodHdlYi8&ntb=1
+                            - link "YouTube" [ref=e178] [cursor=pointer]:
+                              - /url: https://www.bing.com/ck/a?!&&p=91a41ed65aa1afd581b55dd45dbba9914cde54c4add853c18f3b461a88a263f6JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vY2hhbm5lbC9VQzQ2Wmo4cERINXREb3NxbTFnZDdXVGc&ntb=1
+                            - link "Twitter" [ref=e180] [cursor=pointer]:
+                              - /url: https://www.bing.com/ck/a?!&&p=a5d5e4914fcae94c5515fe9296d3adeb846a3d0e5ec073ed72436894b9665b71JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly90d2l0dGVyLmNvbS9wbGF5d3JpZ2h0d2Vi&ntb=1
+                      - generic [ref=e183]:
+                        - list:
+                          - listitem [ref=e184]:
+                            - 'link "GitHub - microsoft/playwright: Playwright is a framework for Web ..." [ref=e186] [cursor=pointer]':
+                              - /url: /images/search?view=detailV2&ccid=no%2bd95uH&id=C57ED6BF45D90ABECAB63BBA7E313456E659C2FC&thid=OIP.no-d95uHh8_Vu67iGJ52ugHaDt&mediaurl=https%3a%2f%2frepository-images.githubusercontent.com%2f221981891%2f8c5c6942-c91f-4df1-825f-4cf474056bd7&exph=640&expw=1280&q=playwright&mode=overlay&FORM=IQFRBA&selectedIndex=0&idpp=serp
+                        - link "All images" [ref=e189] [cursor=pointer]:
+                          - /url: https://www.bing.com/ck/a?!&&p=8aa0f63a350cc9d187a361b7db6268b8161e333413c8f829b8004e0a23e9553dJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1QbGF5d3JpZ2h0JkZPUk09SUFDRlNN&ntb=1
+                          - generic [ref=e191]: All images
+                      - 'link "Get Started with Playwright and VS Code (2025 edition) from YouTube · Duration: 19 minutes 46 seconds · 80.5K views · uploaded on 11 months ago · uploaded by Playwright · Click to play." [ref=e195] [cursor=pointer]':
+                        - /url: https://www.bing.com/ck/a?!&&p=369dca470047af44e46f2b3eab01eb7a737570b88f66c12d0db7fe8f897137daJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9cGxheXdyaWdodCYmbWlkPUU0MkI3REYwREZGRTdBRDA4NkY0RTQyQjdERjBERkZFN0FEMDg2RjQmY2h1cmw9aHR0cHMlM2ElMmYlMmZ3d3cueW91dHViZS5jb20lMmZjaGFubmVsJTJmVUM0NlpqOHBESDV0RG9zcW0xZ2Q3V1RnJkZPUk09VkFNR1pD&ntb=1
+                        - generic [ref=e196]:
+                          - generic [ref=e197]:
+                            - img "Get Started with Playwright and VS Code (2025 edition)" [ref=e199]
+                            - generic [ref=e204]: 19:46
+                          - generic [ref=e205]:
+                            - generic "Get Started with Playwright and VS Code (2025 edition)" [ref=e206]
+                            - generic [ref=e207]:
+                              - generic [ref=e209]: YouTube
+                              - text: › Playwright · 80.5K views · 11 months ago
+            - list "Please use arrow keys to navigate" [ref=e218]:
+              - listitem [ref=e219]:
+                - link "Playwright vs Selenium" [ref=e220] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=084a97a8e9e3a9af2774066641937d8860e84585a5288498195c7c2dc74b1a93JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2NvcGlsb3RzZWFyY2g_cT1QbGF5d3JpZ2h0K3ZzK1NlbGVuaXVtJmZvcm09Q1NTQU5T&ntb=1
+                  - generic [ref=e222]: Playwright vs Selenium
+              - listitem [ref=e223]:
+                - link "Playwright VS Cypress" [ref=e224] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=0cf6dbffbdccc93a422610e26993dec7568ea9517ea70af6d0efdf95e6b19dffJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2NvcGlsb3RzZWFyY2g_cT1QbGF5d3JpZ2h0K1ZTK0N5cHJlc3MmZm9ybT1DU1NBTlM&ntb=1
+                  - generic [ref=e226]: Playwright VS Cypress
+              - listitem [ref=e227]:
+                - link "Playwright VS Puppeteer" [ref=e228] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=281e1a34b0830ed176ec64fda0894ce7227608d0acc9c1de82bcec6d01b5f8a6JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2NvcGlsb3RzZWFyY2g_cT1QbGF5d3JpZ2h0K1ZTK1B1cHBldGVlciZmb3JtPUNTU0FOUw&ntb=1
+                  - generic [ref=e230]: Playwright VS Puppeteer
+      - list [ref=e231]:
+        - listitem [ref=e232]:
+          - generic [ref=e234]:
+            - heading "Videos of Playwright" [level=2] [ref=e236]:
+              - link "Videos of Playwright" [ref=e237] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=56326c5c0d583047f77975062cddd89c002e0b830b93015c01ecb246bf9053cfJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1wbGF5d3JpZ2h0JnFwdnQ9cGxheXdyaWdodCZGT1JNPVZEUkU&ntb=1
+            - generic [ref=e241]:
+              - button "Click to scroll right" [ref=e242] [cursor=pointer]:
+                - img [ref=e247]
+              - list "Please use arrow keys to navigate" [ref=e251]:
+                - listitem [ref=e252]:
+                  - link "What Is Playwright" [ref=e253] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=ac0ba2791172d88a22ba1691ec02759752d8d39de3004ea27d552b78fcacc712JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1XaGF0K0lzK1BsYXl3cmlnaHQmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e255]: What Is Playwright
+                - listitem [ref=e256]:
+                  - link "Playwright Test" [ref=e257] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=5947e5a8a58b02f896dd5895a898854993590f5c150f74c26e767dcdbf3f680eJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K1Rlc3QmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e259]: Playwright Test
+                - listitem [ref=e260]:
+                  - link "Playwright Documentation" [ref=e261] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=0322c92b1d46783cfe8fb6b65f052523a0be0b7837c554f49856e0318ba390a6JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K0RvY3VtZW50YXRpb24mJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e263]: Playwright Documentation
+                - listitem [ref=e264]:
+                  - link "Playwright Installation" [ref=e265] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=9f6da566dfaf82b733217533cf4f5d6434d95f7aea70177f1b148df645cbac2dJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K0luc3RhbGxhdGlvbiYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e267]: Playwright Installation
+                - listitem [ref=e268]:
+                  - link "Playwright Demo" [ref=e269] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=a5956c168a5898cf5ead4db1ee79f306ae78effcaf2b4d0007dcd501a49f0249JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K0RlbW8mJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e271]: Playwright Demo
+                - listitem [ref=e272]:
+                  - link "Playwright Package Guide Python" [ref=e273] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=eee7560148fcebd6979af5029faae346c98b5867c4456ce57ce7379f39bcddceJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K1BhY2thZ2UrR3VpZGUrUHl0aG9uJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e275]: Playwright Package Guide Python
+                - listitem [ref=e276]:
+                  - link "Playwright Features" [ref=e277] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=782ed6ec5f5e411b69004913155955c72936df404484f98e8d30289ec175cc1bJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K0ZlYXR1cmVzJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e279]: Playwright Features
+                - listitem [ref=e280]:
+                  - link "Playwright Interview Questions" [ref=e281] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=54ee6e62ea3fedd9eeab44a00bd32a13f30e53ad7f9ce2dcb4c0122745c96848JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K0ludGVydmlldytRdWVzdGlvbnMmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e283]: Playwright Interview Questions
+                - listitem [ref=e284]:
+                  - link "Playwright Automation" [ref=e285] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=95c18cfb39b1966e73461114664b26b89268283840be6ae6e52b8ebf9af6bd8cJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K0F1dG9tYXRpb24mJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e287]: Playwright Automation
+                - listitem [ref=e288]:
+                  - link "Playwright Tutorial" [ref=e289] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=a54a881b685a4176ec43a31642a038d2a106551965f61f28266c2ed3f115fc4eJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K1R1dG9yaWFsJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e291]: Playwright Tutorial
+                - listitem [ref=e292]:
+                  - link "Playwright Automation Tool" [ref=e293] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=13c37118a742e95bb7a84c358700dc4310a56d215d405f3ab5a7f732a0cc40fdJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K0F1dG9tYXRpb24rVG9vbCYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e295]: Playwright Automation Tool
+                - listitem [ref=e296]:
+                  - link "Jest" [ref=e297] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=f976a637ea051bd711bee30e3ef26958f45b8da572bf49ec5c2d47d08d445083JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1KZXN0JiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e299]: Jest
+                - listitem [ref=e300]:
+                  - link "Microsoft Playwright" [ref=e301] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=9be8b2a07b8a48bc62a15d4fe8f9d56a38a979e519af00b8cb96ab68e3613e89JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1NaWNyb3NvZnQrUGxheXdyaWdodCYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e303]: Microsoft Playwright
+                - listitem [ref=e304]:
+                  - link "Playwrite Basics in Python Tamil" [ref=e305] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=e93ba9cc84ed57dbb4b2c8f15b62f208a8728b94dece7ab3c3cb00c1d02570d1JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpdGUrQmFzaWNzK2luK1B5dGhvbitUYW1pbCYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e307]: Playwrite Basics in Python Tamil
+                - listitem [ref=e308]:
+                  - link "Cypress" [ref=e309] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=67c3cdf1bcf17cd722ae2387bb4ca698347501aaafb593c0c020e3781efae6ebJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1DeXByZXNzJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e311]: Cypress
+                - listitem [ref=e312]:
+                  - link "Python Record and Play Actions" [ref=e313] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=2e5e62e46e2684b18fd4b940f88090e7dbffe6ab1671e8f3ea13c828cfb90c9bJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QeXRob24rUmVjb3JkK2FuZCtQbGF5K0FjdGlvbnMmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e315]: Python Record and Play Actions
+                - listitem [ref=e316]:
+                  - link "Automation" [ref=e317] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=c980397468a080e2d06475bf3bea6e1912136fe5e32120b7ff3933e30191a078JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1BdXRvbWF0aW9uJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e319]: Automation
+                - listitem [ref=e320]:
+                  - link "American Playwright" [ref=e321] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=df01ab60dd72093be275ccb64d9fc59ce35e1771847a8d10727ef0ff1b0632a8JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1BbWVyaWNhbitQbGF5d3JpZ2h0JiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e323]: American Playwright
+                - listitem [ref=e324]:
+                  - link "Mocha" [ref=e325] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=1ad85486c6b4f2a718f4585317cdcef5d73ee35cd14173456f75b5812b052f8cJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1Nb2NoYSYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e327]: Mocha
+                - listitem [ref=e328]:
+                  - link "Playwright Examples" [ref=e329] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=47bc07e0b308456ccfb39fb4a897a3d6df55060e586412d81b4380efa77da348JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K0V4YW1wbGVzJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e331]: Playwright Examples
+                - listitem [ref=e332]:
+                  - link "Playwright with Python Tutorial in Vc" [ref=e333] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=fd3d43994eda5c7e5011457fb6126127d3afc6aacd272b1749f7175354ee5338JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K3dpdGgrUHl0aG9uK1R1dG9yaWFsK2luK1ZjJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e335]: Playwright with Python Tutorial in Vc
+                - listitem [ref=e336]:
+                  - link "Playwright Microsoft Testing Tutorial" [ref=e337] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=0169673be055f15b5ecf2605c747266671ee73d20da6ddc7c9eac3cdd6004b1dJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K01pY3Jvc29mdCtUZXN0aW5nK1R1dG9yaWFsJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e339]: Playwright Microsoft Testing Tutorial
+                - listitem [ref=e340]:
+                  - link "Raghav Playwright" [ref=e341] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=abfbe262209376693f249ab81243265b9a3888c9210e24cafe9d8f92b9bd76e8JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1SYWdoYXYrUGxheXdyaWdodCYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e343]: Raghav Playwright
+                - listitem [ref=e344]:
+                  - link "Playwright Test Automation" [ref=e345] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=ca352a38858a0a643d51ee81f7cf04d582cb00115d5c94fd714814166f66ed11JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K1Rlc3QrQXV0b21hdGlvbiYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e347]: Playwright Test Automation
+                - listitem [ref=e348]:
+                  - link "Playwright with Ai" [ref=e349] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=48c94e6ee519450ed6dc4fe809a07f405ee2eb3355d29e7b8f9d06ecf1e19071JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K3dpdGgrQWkmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e351]: Playwright with Ai
+                - listitem [ref=e352]:
+                  - link "Platwright Framework in Tamil" [ref=e353] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=d45395e0cf9c220a6d01a0ec8880883c94952257ddb77cf64d8d766eeb5cf089JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF0d3JpZ2h0K0ZyYW1ld29yaytpbitUYW1pbCYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e355]: Platwright Framework in Tamil
+                - listitem [ref=e356]:
+                  - link "Best Plays by Playwrights" [ref=e357] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=cafa95380e6003e21344c8f1f4a73681abbd4328992c8d42fabe87256db3d662JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1CZXN0K1BsYXlzK2J5K1BsYXl3cmlnaHRzJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e359]: Best Plays by Playwrights
+                - listitem [ref=e360]:
+                  - link "Famous Playwrights" [ref=e361] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=4b522ea34c190ef15c972d06da71a320c127f29c3ee9cf261ee2688a7eb7023aJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1GYW1vdXMrUGxheXdyaWdodHMmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e363]: Famous Playwrights
+                - listitem [ref=e364]:
+                  - link "Edward Albee" [ref=e365] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=8f75fd30baa5413b35cc94111f8e14aad903a51b27204e98456912393233aa29JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1FZHdhcmQrQWxiZWUmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e367]: Edward Albee
+                - listitem [ref=e368]:
+                  - link "Python for Playwright" [ref=e369] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=e04936cf652cd29e0947bdce56a1d935c3794b07e7e7e5e3db94ee4b5b0327c5JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QeXRob24rZm9yK1BsYXl3cmlnaHQmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e371]: Python for Playwright
+                - listitem [ref=e372]:
+                  - link "Constantin Stanislavski" [ref=e373] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=c7aaa55b5bdf84ffc7e30a43be35f7e90eb90ae644b7df4487cca8553bd705c3JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1Db25zdGFudGluK1N0YW5pc2xhdnNraSYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e375]: Constantin Stanislavski
+                - listitem [ref=e376]:
+                  - link "Edward Albee Plays" [ref=e377] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=7170b5ff57f1ab85ee78666b2afe4e97c218919935e41639915975da263b13fcJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1FZHdhcmQrQWxiZWUrUGxheXMmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e379]: Edward Albee Plays
+                - listitem [ref=e380]:
+                  - link "Costume Design" [ref=e381] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=a69715b0be5be8acaed1ef8176eb3578dc47ff479c7d7ef0497e1556189afb76JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1Db3N0dW1lK0Rlc2lnbiYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e383]: Costume Design
+                - listitem [ref=e384]:
+                  - link "Elizabethan-era" [ref=e385] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=38d6321bd866e7d76976341288c24ff9946093239fb822358d2e4147f3849cc6JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1FbGl6YWJldGhhbi1lcmEmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e387]: Elizabethan-era
+                - listitem [ref=e388]:
+                  - link "Playwright in 1 Hour" [ref=e389] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=ac4323eacd09d8da4ebad2387a06b26c3c7b3824fc3481dfc3107b4e7bec8e1cJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K2luKzErSG91ciYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e391]: Playwright in 1 Hour
+                - listitem [ref=e392]:
+                  - link "Dennis Potter" [ref=e393] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=436bf8385563942baadcb12356cbabe57246fb5253d15bafd8362cd23346da1eJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1EZW5uaXMrUG90dGVyJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e395]: Dennis Potter
+                - listitem [ref=e396]:
+                  - link "Describing a Place" [ref=e397] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=d1274ef5a3bc1e953a457c026b0c2a674b3ea9cd2abb1c2c00d06189bbb19daeJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1EZXNjcmliaW5nK2ErUGxhY2UmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e399]: Describing a Place
+                - listitem [ref=e400]:
+                  - link "Dario Fo" [ref=e401] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=a38d726b8c5f526da02c545ed2c69bbdad8c4a2c15402234dd88c209368f4c63JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1EYXJpbytGbyYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e403]: Dario Fo
+                - listitem [ref=e404]:
+                  - link "August Wilson" [ref=e405] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=f7b5c7813f4b04ff27d9cd221410988a7b3cb46d795a409fe1d5633134401ad2JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1BdWd1c3QrV2lsc29uJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e407]: August Wilson
+                - listitem [ref=e408]:
+                  - link "Famous Playwrights of All Time" [ref=e409] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=1a926ab36374ab9236bb94a5e3a7399c6ed57ee37d9c2c1004d1f273bc12b2daJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1GYW1vdXMrUGxheXdyaWdodHMrb2YrQWxsK1RpbWUmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e411]: Famous Playwrights of All Time
+                - listitem [ref=e412]:
+                  - link "Ancient Greek Playwrights" [ref=e413] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=93e005aa1cef63048083dbe889d235693a590634740ff7b77256857cc306bad0JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1BbmNpZW50K0dyZWVrK1BsYXl3cmlnaHRzJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e415]: Ancient Greek Playwrights
+                - listitem [ref=e416]:
+                  - link "Arthur Miller" [ref=e417] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=6979ccdfece8775efa54cb75e66a2f91674e6543edeb0533e6c23e3ece84a0bfJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1BcnRodXIrTWlsbGVyJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e419]: Arthur Miller
+                - listitem [ref=e420]:
+                  - link "Death of Julius Caesar" [ref=e421] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=998e1e48287d834960a4ec8f220fd354048b167713f211457b00bab0f1bc858dJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1EZWF0aCtvZitKdWxpdXMrQ2Flc2FyJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e423]: Death of Julius Caesar
+                - listitem [ref=e424]:
+                  - link "Artistic Director" [ref=e425] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=33d2b00c7240983d331692b2b13aa9cd2adb1ec94692210dd3942898f1e2a025JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1BcnRpc3RpYytEaXJlY3RvciYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e427]: Artistic Director
+                - listitem [ref=e428]:
+                  - link "Biography of William Shakespeare" [ref=e429] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=7cfeb947f59e2dc7727d5f6bb25a9be11035bba6c33b80a64aa37c6728e1e9e4JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1CaW9ncmFwaHkrb2YrV2lsbGlhbStTaGFrZXNwZWFyZSYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e431]: Biography of William Shakespeare
+                - listitem [ref=e432]:
+                  - link "Edward O. Wilson" [ref=e433] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=7cac23ff66eec4ea961f3118267d8e37e6a30568936eaea18b15fbbecd07e68fJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1FZHdhcmQrTy4rV2lsc29uJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e435]: Edward O. Wilson
+                - listitem [ref=e436]:
+                  - link "David Henry Hwang" [ref=e437] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=1eec70849e690f837bcf5c40708848a551c77ee1cb605a94b14faa4036525868JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1EYXZpZCtIZW5yeStId2FuZyYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e439]: David Henry Hwang
+                - listitem [ref=e440]:
+                  - link "Writing a Play" [ref=e441] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=c593dec1b5f083d52337ac6d7e19019a1e0b9b99957f1e1425a4b58ca0747538JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1Xcml0aW5nK2ErUGxheSYmRk9STT1WQVJTUVA&ntb=1
+                    - generic [ref=e443]: Writing a Play
+                - listitem [ref=e444]:
+                  - link "Playwright Tool" [ref=e445] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=e82d95415d11415a0adae68d20a1bdbd722fc29f8592816fceb183977ac305fdJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K1Rvb2wmJkZPUk09VkFSU1FQ&ntb=1
+                    - generic [ref=e447]: Playwright Tool
+                - listitem [ref=e448]:
+                  - link "Jackie Wilson" [ref=e449] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=6edd5a3282f023f8afdf8a5b5764f4967146c59ab9206fc2028b7523444ba574JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9zZWFyY2g_cT1KYWNraWUrV2lsc29uJiZGT1JNPVZBUlNRUA&ntb=1
+                    - generic [ref=e451]: Jackie Wilson
+            - generic [ref=e453]:
+              - 'link "Playwright Tutorial for Testers | Real Project Step-by-Step (Beginner to Advanced) from YouTube · Duration: 15 minutes 10 seconds · 247 views · uploaded on 2 months ago · uploaded by Interesting data · Click to play. · 🚀 Want to become an Automation Tester using Playwright? In this complete Playwright tutorial, you will learn automation testing step-by-step by building a real-world project from scratch. This is not just theory — this is exactly how automation testing works in real companies. 🎯 What you’ll learn in this video: ️ Playwright basics ..." [ref=e456] [cursor=pointer]':
+                - /url: https://www.bing.com/ck/a?!&&p=64dbd9456c61d5d230d47a8eb07b0482e36e831d9f9d9231f5e0d0d333c2820eJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9cGxheXdyaWdodCZtaWQ9M0VDOTUwMkQ5ODRFRTkzMzk5MjUzRUM5NTAyRDk4NEVFOTMzOTkyNSZjaHVybD1odHRwcyUzYSUyZiUyZnd3dy55b3V0dWJlLmNvbSUyZmNoYW5uZWwlMmZVQ0pjZlViNHFNRV9HMC1CZGZ3SXR0NHcmRk9STT1WSVJF&ntb=1
+                - generic [ref=e457]:
+                  - generic [ref=e458]:
+                    - img "Playwright Tutorial for Testers | Real Project Step-by-Step (Beginner to Advanced)" [ref=e460]
+                    - generic [ref=e466]: 15:10
+                  - generic [ref=e467]:
+                    - generic "Playwright Tutorial for Testers | Real Project Step-by-Step (Beginner to Advanced)" [ref=e468]:
+                      - strong [ref=e469]: Playwright
+                      - text: Tutorial for Testers | Real Project Step-by-Step (Beginner to Advanced)
+                    - generic [ref=e470]:
+                      - generic [ref=e471]:
+                        - img "Video source site" [ref=e472]
+                        - text: YouTube · Interesting data
+                      - generic [ref=e473]: 247 views · 2 months ago
+              - 'link "Software Testing Course – Playwright, E2E, and AI Agents from YouTube · Duration: 1 hour 3 minutes 31 seconds · 79.4K views · uploaded on 3 months ago · uploaded by freeCodeCamp.org · Click to play. · Learn the essentials of software testing, from fundamental concepts like the testing pyramid to hands-on automation using Playwright. You will explore real-world case studies of software failures and learn advanced techniques such as mocking, edge case testing, and accessibility. Finally, discover how AI-powered tools like Kane AI are enabling ..." [ref=e476] [cursor=pointer]':
+                - /url: https://www.bing.com/ck/a?!&&p=c58d81d88a7af8089c9d80fd53acf57127729c053ef542e893d375f9c64ee777JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9cGxheXdyaWdodCZtaWQ9REI4RjhGOTgzNUQ4QUVBQTE0MzFEQjhGOEY5ODM1RDhBRUFBMTQzMSZjaHVybD1odHRwcyUzYSUyZiUyZnd3dy55b3V0dWJlLmNvbSUyZmNoYW5uZWwlMmZVQzhidXRJU0Z3VC1XbDdFVjBoVUswQlEmRk9STT1WSVJF&ntb=1
+                - generic [ref=e477]:
+                  - generic [ref=e478]:
+                    - img "Software Testing Course – Playwright, E2E, and AI Agents" [ref=e480]
+                    - generic [ref=e486]: 1:03:31
+                  - generic [ref=e487]:
+                    - generic "Software Testing Course – Playwright, E2E, and AI Agents" [ref=e488]:
+                      - text: Software Testing Course –
+                      - strong [ref=e489]: Playwright
+                      - text: ", E2E, and AI Agents"
+                    - generic [ref=e490]:
+                      - generic [ref=e491]:
+                        - img "Video source site" [ref=e492]
+                        - text: YouTube · freeCodeCamp.org
+                      - generic [ref=e493]: 79.4K views · 3 months ago
+              - 'link "Playwright Fixtures Explained 🔥 | Step-by-Step Tutorial for Beginners from YouTube · Duration: 10 minutes 34 seconds · 14.5K views · uploaded on 3 months ago · uploaded by Automation Step by Step · Click to play. · In this Playwright tutorial, we learn Fixtures from scratch with a beginner-friendly explanation and hands-on demo. Fixtures are setups prepared in advance that tests can use when needed. Fixtures are one of the most powerful features in Playwright that allow us to prepare reusable setups before tests run. They help reduce duplicate code and ..." [ref=e496] [cursor=pointer]':
+                - /url: https://www.bing.com/ck/a?!&&p=e3c38b44b08ca2213254c2ca4e3b300e60e47eb17467ff24a50e3850514d87c9JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9cGxheXdyaWdodCZtaWQ9REJBQ0U2RUQxQUJCRTM5QzVBRjVEQkFDRTZFRDFBQkJFMzlDNUFGNSZjaHVybD1odHRwcyUzYSUyZiUyZnd3dy55b3V0dWJlLmNvbSUyZmNoYW5uZWwlMmZVQ1R0N3B5WS1vMGVsdHExNGdsYUc1ZGcmRk9STT1WSVJF&ntb=1
+                - generic [ref=e497]:
+                  - generic [ref=e498]:
+                    - img "Playwright Fixtures Explained 🔥 | Step-by-Step Tutorial for Beginners" [ref=e500]
+                    - generic [ref=e506]: 10:34
+                  - generic [ref=e507]:
+                    - generic "Playwright Fixtures Explained 🔥 | Step-by-Step Tutorial for Beginners" [ref=e508]:
+                      - strong [ref=e509]: Playwright
+                      - text: Fixtures Explained 🔥 | Step-by-Step Tutorial for Beginners
+                    - generic [ref=e510]:
+                      - generic [ref=e511]:
+                        - img "Video source site" [ref=e512]
+                        - text: YouTube · Automation Step by Step
+                      - generic [ref=e513]: 14.5K views · 3 months ago
+        - listitem [ref=e514]:
+          - link "Playwright" [ref=e516] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=43860194524fb718a86b32b4a079a2d54eeefe2486492ca7da1815f3f6e84c73JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi9kb2NzL2ludHJv&ntb=1
+            - img "Global web icon" [ref=e520]
+            - generic [ref=e521]:
+              - generic [ref=e522]: Playwright
+              - generic [ref=e525]:
+                - text: https://
+                - strong [ref=e526]: playwright
+                - text: .dev › docs › intro
+          - heading "Installation | Playwright" [level=2] [ref=e527]:
+            - link "Installation | Playwright" [ref=e528] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=43860194524fb718a86b32b4a079a2d54eeefe2486492ca7da1815f3f6e84c73JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi9kb2NzL2ludHJv&ntb=1
+          - generic [ref=e532]:
+            - generic [ref=e533]:
+              - img [ref=e535] [cursor=pointer]
+              - tablist [ref=e538]:
+                - tab "Installation#" [ref=e539] [cursor=pointer]
+                - tab "First Test#" [ref=e540] [cursor=pointer]
+                - tab "Configuration File#" [selected] [ref=e541]
+                - tab "Writing Assertions#" [ref=e542] [cursor=pointer]
+                - tab "Using Test Fixtures#" [ref=e543] [cursor=pointer]
+                - tab "Using Test Hooks#" [ref=e544] [cursor=pointer]
+                - tab "Command Line#" [ref=e545] [cursor=pointer]
+                - tab "Configure npm Scripts#" [ref=e546] [cursor=pointer]
+              - img [ref=e548] [cursor=pointer]
+            - tabpanel "Configuration File#" [ref=e551]:
+              - list [ref=e552]:
+                - listitem [ref=e553]:
+                  - generic [ref=e554]:
+                    - text: To enjoy all the features that
+                    - strong [ref=e555]: Playwright
+                    - text: Test has to offer, you would want to create a configuration file playwright.config.ts (or
+                    - strong [ref=e556]: playwright
+                    - text: .config.js). It allows you to run tests in multiple browsers configured as you'd like. Here is an example configuration that runs every test in Chromium, Firefox and WebKit, by creating a "project" for each b...
+              - link "See more on playwright.dev" [ref=e557] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=058605f30672a0e18b435541a77e960cf1d1307feb6aaa351d7b96a7c4db55d8JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9wbGF5d3JpZ2h0LmRldi9kb2NzL2ludHJvLw&ntb=1
+        - listitem [ref=e558]:
+          - generic [ref=e559]:
+            - link "Explore this image" [ref=e562] [cursor=pointer]:
+              - /url: /images/search?view=detailV2&ccid=no+d95uH&id=C57ED6BF45D90ABECAB63BBA7E313456E659C2FC&thid=OIP.no-d95uHh8_Vu67iGJ52ugHaDt&mediaurl=https://repository-images.githubusercontent.com/221981891/8c5c6942-c91f-4df1-825f-4cf474056bd7&q=playwright&ck=E70A14FE7EBECB658DA05B9BDD876F1B&idpp=rc&expw=1280&exph=640&form=rc2idp
+              - img [ref=e563]
+            - generic [ref=e564]:
+              - link "Github" [ref=e566] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=beba6d8aaedd18d53836d529dbd68de5ebcae4dfb211fecdf81057c4b91ae78bJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9naXRodWIuY29tL21pY3Jvc29mdC9wbGF5d3JpZ2h0&ntb=1
+                - img "Global web icon" [ref=e570]
+                - generic [ref=e571]:
+                  - generic [ref=e572]: Github
+                  - generic [ref=e575]:
+                    - text: https://
+                    - strong [ref=e576]: github.com
+                    - text: › microsoft ›
+                    - strong [ref=e577]: playwright
+              - 'heading "GitHub - microsoft/playwright: Playwright is a framework …" [level=2] [ref=e578]':
+                - 'link "GitHub - microsoft/playwright: Playwright is a framework …" [ref=e579] [cursor=pointer]':
+                  - /url: https://www.bing.com/ck/a?!&&p=beba6d8aaedd18d53836d529dbd68de5ebcae4dfb211fecdf81057c4b91ae78bJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9naXRodWIuY29tL21pY3Jvc29mdC9wbGF5d3JpZ2h0&ntb=1
+              - paragraph [ref=e580]: Playwright is a framework for web automation and testing. It drives Chromium, Firefox, and WebKit with a single API — in your tests, in your scripts, and as a …
+        - listitem [ref=e582]:
+          - generic [ref=e583]:
+            - link "Explore this image" [ref=e586] [cursor=pointer]:
+              - /url: /images/search?view=detailV2&ccid=TcheT2ux&id=0FA5098B8BCEF95D2B060218D8CE7BCA61E87291&thid=OIP.TcheT2uxv2Ap7YV9IU6VAwAAAA&mediaurl=https://devblogs.microsoft.com/wp-content/uploads/2025/08/The-Complete-Playwright-end-to-end-story.png&q=playwright&ck=1C37E0B12EA953D7E51E8327FD2B50C6&idpp=rc&expw=474&exph=266&form=rc2idp
+              - img [ref=e587]
+            - generic [ref=e588]:
+              - link "Microsoft Developer" [ref=e590] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=2d311a84115f377131c8c860e203e47c9b84acbba6db6b226fb4328d86ab9fdfJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9kZXZlbG9wZXIubWljcm9zb2Z0LmNvbS9ibG9nL3RoZS1jb21wbGV0ZS1wbGF5d3JpZ2h0LWVuZC10by1lbmQtc3RvcnktdG9vbHMtYWktYW5kLXJlYWwtd29ybGQtd29ya2Zsb3dz&ntb=1
+                - img "Global web icon" [ref=e594]
+                - generic [ref=e595]:
+                  - generic [ref=e596]: Microsoft Developer
+                  - generic [ref=e599]:
+                    - text: https://developer.microsoft.com › blog › the-complete-
+                    - strong [ref=e600]: playw
+                    - text: …
+              - heading "The Complete Playwright End-to-End Story, Tools, AI, …" [level=2] [ref=e601]:
+                - link "The Complete Playwright End-to-End Story, Tools, AI, …" [ref=e602] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=2d311a84115f377131c8c860e203e47c9b84acbba6db6b226fb4328d86ab9fdfJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9kZXZlbG9wZXIubWljcm9zb2Z0LmNvbS9ibG9nL3RoZS1jb21wbGV0ZS1wbGF5d3JpZ2h0LWVuZC10by1lbmQtc3RvcnktdG9vbHMtYWktYW5kLXJlYWwtd29ybGQtd29ya2Zsb3dz&ntb=1
+              - paragraph [ref=e603]: Aug 7, 2025 · Playwright offers a full ecosystem empowering developers to write, debug, and maintain tests with speed and reliability. From its powerful test runner …
+        - listitem [ref=e605]:
+          - link "AutomationTestingHub" [ref=e607] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6720b236aeecac0e3340c3258e4255681e01c465daf75765a63c81ee4b4761fdJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly93d3cuYXV0b21hdGlvbnRlc3RpbmdodWIuY29tL3BsYXl3cmlnaHQtYXV0b21hdGlvbi10ZXN0aW5nLXR1dG9yaWFsLw&ntb=1
+            - img "Global web icon" [ref=e611]
+            - generic [ref=e612]:
+              - generic [ref=e613]: AutomationTestingHub
+              - generic [ref=e616]:
+                - text: https://www.automationtestinghub.com ›
+                - strong [ref=e617]: playwright
+                - text: "-automation-testing-tutorial"
+          - heading "Playwright Automation Testing Tutorial - AutomationTestingHub" [level=2] [ref=e618]:
+            - link "Playwright Automation Testing Tutorial - AutomationTestingHub" [ref=e619] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=6720b236aeecac0e3340c3258e4255681e01c465daf75765a63c81ee4b4761fdJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly93d3cuYXV0b21hdGlvbnRlc3RpbmdodWIuY29tL3BsYXl3cmlnaHQtYXV0b21hdGlvbi10ZXN0aW5nLXR1dG9yaWFsLw&ntb=1
+          - paragraph [ref=e621]: Jan 22, 2026 · Playwright is an open-source framework for end-to-end web automation developed by Microsoft. You can use it to automate and test modern web applications across all major browser …
+        - listitem [ref=e622]:
+          - generic [ref=e623]:
+            - link "Explore this image" [ref=e626] [cursor=pointer]:
+              - /url: /images/search?view=detailV2&ccid=xNZ2XTYG&id=A51C962924972FE04858E13A964BC6128349EF83&thid=OIP.xNZ2XTYGcl1hFcl6CrJLxQHaGs&mediaurl=https://browserstack.wpenginepowered.com/wp-content/uploads/2022/05/Guide-42.png&q=playwright&ck=16C24F4475701A5AE7E4AF1F744F3945&idpp=rc&expw=1160&exph=1048&form=rc2idp
+              - img [ref=e627]
+            - generic [ref=e628]:
+              - link "BrowserStack" [ref=e630] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=b15bc72dff6b26b2c397346b570f8755bfa508b3b40e716fff5ed2bb8692500fJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly93d3cuYnJvd3NlcnN0YWNrLmNvbS9ndWlkZS9wbGF5d3JpZ2h0LXR1dG9yaWFs&ntb=1
+                - img "Global web icon" [ref=e634]
+                - generic [ref=e635]:
+                  - generic [ref=e636]: BrowserStack
+                  - generic [ref=e639]:
+                    - text: https://www.browserstack.com › guide ›
+                    - strong [ref=e640]: playwright
+                    - text: "-tutorial"
+              - 'heading "Playwright Automation Framework: Tutorial [2026]" [level=2] [ref=e641]':
+                - 'link "Playwright Automation Framework: Tutorial [2026]" [ref=e642] [cursor=pointer]':
+                  - /url: https://www.bing.com/ck/a?!&&p=b15bc72dff6b26b2c397346b570f8755bfa508b3b40e716fff5ed2bb8692500fJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly93d3cuYnJvd3NlcnN0YWNrLmNvbS9ndWlkZS9wbGF5d3JpZ2h0LXR1dG9yaWFs&ntb=1
+              - paragraph [ref=e643]: Jan 16, 2026 · Learn how to write and run Playwright tests with locators, debugging, and best practices. Build stable, scalable test automation with real examples. …
+        - listitem [ref=e645]:
+          - link "Wikipedia" [ref=e647] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=ba33c8eea78d70b21be389e0ef98a5093c476d31ac60228df9891d4389258440JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUGxheXdyaWdodF8oc29mdHdhcmUp&ntb=1
+            - img "Global web icon" [ref=e651]
+            - generic [ref=e652]:
+              - generic [ref=e653]: Wikipedia
+              - generic [ref=e656]:
+                - text: https://
+                - strong [ref=e657]: en.wikipedia.org
+                - text: › wiki ›
+                - strong [ref=e658]: Playwright
+                - text: _(software)
+          - heading "Playwright (software) - Wikipedia" [level=2] [ref=e659]:
+            - link "Playwright (software) - Wikipedia" [ref=e660] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=ba33c8eea78d70b21be389e0ef98a5093c476d31ac60228df9891d4389258440JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUGxheXdyaWdodF8oc29mdHdhcmUp&ntb=1
+          - paragraph [ref=e662]: Playwright is an open-source automation library for browser testing and web scraping [3] developed by Microsoft [4][5] and launched on 31 January 2020, which has since become popular among …
+        - listitem [ref=e663]:
+          - link "GeeksForGeeks" [ref=e665] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6f1f29a457811e978ae87c1ce69ca96af9f671e079c130f78271c1d74346add3JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvc29mdHdhcmUtdGVzdGluZy9kaWZmZXJlbmNlLWJldHdlZW4tcGxheXdyaWdodC1hbmQtc2VsZW5pdW0v&ntb=1
+            - img "Global web icon" [ref=e669]
+            - generic [ref=e670]:
+              - generic [ref=e671]: GeeksForGeeks
+              - generic [ref=e674]: https://www.geeksforgeeks.org › software-testing › difference-between...
+          - heading "Playwright Vs Selenium - GeeksforGeeks" [level=2] [ref=e675]:
+            - link "Playwright Vs Selenium - GeeksforGeeks" [ref=e676] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=6f1f29a457811e978ae87c1ce69ca96af9f671e079c130f78271c1d74346add3JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvc29mdHdhcmUtdGVzdGluZy9kaWZmZXJlbmNlLWJldHdlZW4tcGxheXdyaWdodC1hbmQtc2VsZW5pdW0v&ntb=1
+          - paragraph [ref=e678]: Jun 9, 2026 · Playwright is an open-source automation framework developed by Microsoft for testing and automating modern web applications. It enables reliable and fast browser automation across multiple …
+        - listitem [ref=e679]:
+          - link "Github" [ref=e681] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=f3f00a9a1388da2708728994b1750f2ab6b97722fdadc2573543256ffc6a698eJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9naXRodWIuY29tL1BsYXl3cmlnaHQtRG9jcw&ntb=1
+            - img "Global web icon" [ref=e685]
+            - generic [ref=e686]:
+              - generic [ref=e687]: Github
+              - generic [ref=e690]:
+                - text: https://
+                - strong [ref=e691]: github.com
+                - text: ›
+                - strong [ref=e692]: Playwright
+                - text: "-Docs"
+          - heading "Playwright Docs - Reliable Browser Automation and End-to-End Testing" [level=2] [ref=e693]:
+            - link "Playwright Docs - Reliable Browser Automation and End-to-End Testing" [ref=e694] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=f3f00a9a1388da2708728994b1750f2ab6b97722fdadc2573543256ffc6a698eJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9naXRodWIuY29tL1BsYXl3cmlnaHQtRG9jcw&ntb=1
+          - paragraph [ref=e696]: Playwright Docs is a Microsoft-backed framework for dependable browser automation, end-to-end checks, debugging traces, and CI-ready web quality.
+        - listitem [ref=e697]:
+          - link "Microsoft Learn" [ref=e699] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e169208cc41aa1381f072b0df25c72cd74d653d8992dc0826102729fac72c90aJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3Jlc3QvYXBpL3BsYXl3cmlnaHQv&ntb=1
+            - img "Global web icon" [ref=e703]
+            - generic [ref=e704]:
+              - generic [ref=e705]: Microsoft Learn
+              - generic [ref=e708]:
+                - text: https://learn.microsoft.com › en-us › rest › api ›
+                - strong [ref=e709]: playwright
+          - heading "Microsoft Playwright Testing | Microsoft Learn" [level=2] [ref=e710]:
+            - link "Microsoft Playwright Testing | Microsoft Learn" [ref=e711] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=e169208cc41aa1381f072b0df25c72cd74d653d8992dc0826102729fac72c90aJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3Jlc3QvYXBpL3BsYXl3cmlnaHQv&ntb=1
+          - paragraph [ref=e713]: In this module, you'll learn how to use Playwright to test a sample web application. You'll learn how to run tests, view test reports, and understand the structure of a Playwright project. You'll also learn how …
+        - listitem [ref=e714]:
+          - generic [ref=e715]:
+            - heading "Images of Playwright Related searches" [level=2] [ref=e716]:
+              - link "Images of Playwright" [ref=e717] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=8a3be40abb9980183fe0297c9fdfb493983ec4cf279c015831224de9382760bdJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1wbGF5d3JpZ2h0JnFwdnQ9cGxheXdyaWdodCZGT1JNPUlHUkU&ntb=1
+                - generic [ref=e718]: Images of Playwright
+                - img [ref=e720]
+              - navigation "Related searches" [ref=e722]:
+                - generic [ref=e724]:
+                  - button "Click to scroll right" [ref=e725] [cursor=pointer]
+                  - list "Please use arrow keys to navigate" [ref=e732]:
+                    - listitem [ref=e733]:
+                      - link "Quotes" [ref=e734] [cursor=pointer]:
+                        - /url: https://www.bing.com/ck/a?!&&p=8c69322d97f12d97a05ebc84bb33d9db0ce69ec9b0157988395889bde9b9d29bJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K1F1b3RlcyZGT1JNPUlBUlNMSw&ntb=1
+                        - generic [ref=e737]: Quotes
+                    - listitem [ref=e738]:
+                      - link "Scripts" [ref=e739] [cursor=pointer]:
+                        - /url: https://www.bing.com/ck/a?!&&p=29582f413f7ee56898115e6d095b096af14ff1fb6c8987f533830325bdda8935JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K1NjcmlwdHMmRk9STT1JQVJTTEs&ntb=1
+                        - generic [ref=e742]: Scripts
+                    - listitem [ref=e743]:
+                      - link "Techniques" [ref=e744] [cursor=pointer]:
+                        - /url: https://www.bing.com/ck/a?!&&p=0fe85554907d1da9d0f4de1b79d7b8dcf6ab4b1679205e555367d4dad91117f0JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K1RlY2huaXF1ZXMmRk9STT1JQVJTTEs&ntb=1
+                        - generic [ref=e747]: Techniques
+                    - listitem [ref=e748]:
+                      - link "Awards" [ref=e749] [cursor=pointer]:
+                        - /url: https://www.bing.com/ck/a?!&&p=dacaca1ce38041d98686938ea0c12b99527c4cc4a6848e1a71facc2002e3495aJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1QbGF5d3JpZ2h0K0F3YXJkcyZGT1JNPUlBUlNMSw&ntb=1
+                        - generic [ref=e752]: Awards
+                    - listitem [ref=e753]:
+                      - link "Stage" [ref=e754] [cursor=pointer]:
+                        - /url: https://www.bing.com/ck/a?!&&p=dc8a62e0df270415bd1bb8c39d6e6d70efe7f22d40c6a165162f5496b7146743JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1TdGFnZSZGT1JNPUlBUlNMSw&ntb=1
+                        - generic [ref=e757]: Stage
+                    - listitem [ref=e758]:
+                      - link "Drama" [ref=e759] [cursor=pointer]:
+                        - /url: https://www.bing.com/ck/a?!&&p=16a8fcf2b250309d0e370c1d62e0983791738c6895526e2c7dbe5df911455a19JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1EcmFtYSZGT1JNPUlBUlNMSw&ntb=1
+                        - generic [ref=e762]: Drama
+                    - listitem [ref=e763]:
+                      - link "Theatre" [ref=e764] [cursor=pointer]:
+                        - /url: https://www.bing.com/ck/a?!&&p=bf0fc4d788f5fcdb6d3ca581168a7ff8881d4963dd9f54d5dcd998a9b780de26JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1UaGVhdHJlJkZPUk09SUFSU0xL&ntb=1
+                        - generic [ref=e767]: Theatre
+                    - listitem [ref=e768]:
+                      - link "Actor" [ref=e769] [cursor=pointer]:
+                        - /url: https://www.bing.com/ck/a?!&&p=fc66e155089f5b1d3f3e8714614c5f0ac9947d10b89b06ae1a00555854d773eaJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1BY3RvciZGT1JNPUlBUlNMSw&ntb=1
+                        - generic [ref=e772]: Actor
+                    - listitem [ref=e773]:
+                      - link "Novelist" [ref=e774] [cursor=pointer]:
+                        - /url: https://www.bing.com/ck/a?!&&p=2779e978937080a920b72c70bdc203f25ef042919424c11e34230ff80fef3e22JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1Ob3ZlbGlzdCZGT1JNPUlBUlNMSw&ntb=1
+                        - generic [ref=e777]: Novelist
+            - generic [ref=e779]:
+              - region "Image Carousel" [ref=e780]:
+                - list [ref=e781]:
+                  - listitem [ref=e782]:
+                    - list [ref=e783]:
+                      - listitem [ref=e784]:
+                        - link "调试测试 | Playwright - Playwright 测试框架" [ref=e786] [cursor=pointer]:
+                          - /url: /images/search?view=detailV2&ccid=qJ5RWrdW&id=D023BB78F6327E9AFBBAE3A667291E5DCCE4F30B&thid=OIP.qJ5RWrdW-t6HxaAxlrOiXAHaEw&mediaurl=https%3a%2f%2fuser-images.githubusercontent.com%2f13063165%2f219473050-122be4c2-31d0-4cbd-aa8b-8588e8b781a6.png&exph=1736&expw=2700&q=playwright&mode=overlay&FORM=IQFRBA&ck=4D1AD19F46155CE897847031ED14E14D&selectedIndex=0&idpp=serp
+                      - listitem [ref=e789]:
+                        - 'link "Playwright API Testing Tutorial: A Complete Guide With Examples" [ref=e791] [cursor=pointer]':
+                          - /url: /images/search?view=detailV2&ccid=EjwUcoug&id=6205C74707C2D9B1E4FE86ED9EF5663874DCAD84&thid=OIP.EjwUcougtVoodH3dJZk-qgHaEL&mediaurl=https%3a%2f%2fuser-images.githubusercontent.com%2f13063165%2f194532498-b7f88d69-65a3-49f4-b701-5ef7134bc551.png&exph=1430&expw=2536&q=playwright&mode=overlay&FORM=IQFRBA&ck=94C4E5EB5C83E5285E183C8B1F4E3902&selectedIndex=0&idpp=serp
+                      - listitem [ref=e794]:
+                        - 'link "Quickstart: Continuous end-to-end testing - Microsoft Playwright ..." [ref=e796] [cursor=pointer]':
+                          - /url: /images/search?view=detailV2&ccid=LMw6iwah&id=7244DCC52E464FB4006252335F9ECDA15EC2E854&thid=OIP.LMw6iwahsCmJRoLeXuciCwHaDt&mediaurl=https%3a%2f%2flearn.microsoft.com%2fen-us%2fazure%2fplaywright-testing%2fmedia%2finclude-playwright-portal-view-test-results-nunit%2fplaywright-testing-trace-viewer.png&exph=940&expw=1877&q=playwright&mode=overlay&FORM=IQFRBA&ck=447D4FB115203F1BE14DE14998F476A3&selectedIndex=0&idpp=serp
+                      - listitem [ref=e799]:
+                        - link "Trace viewer | Playwright" [ref=e801] [cursor=pointer]:
+                          - /url: /images/search?view=detailV2&ccid=no%2bd95uH&id=88B0D3B73074CB8022603BBA7E313456E659C2FC&thid=OIP.no-d95uHh8_Vu67iGJ52ugHaDt&mediaurl=https%3a%2f%2frepository-images.githubusercontent.com%2f221981891%2f8c5c6942-c91f-4df1-825f-4cf474056bd7&exph=640&expw=1280&q=playwright&mode=overlay&FORM=IQFRBA&ck=1562372FC516BCDDB253FC6376FD59C1&selectedIndex=0&idpp=serp
+              - list "Navigation controls":
+                - listitem
+                - listitem:
+                  - button "Next" [ref=e804] [cursor=pointer]:
+                    - img
+              - generic [ref=e805]: Scrolled 0%
+            - link "See all images" [ref=e806] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=25f7fa05d449f9de30071da88496e4ac178c0090573f0d614800a3f702976943JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L2ltYWdlcy9zZWFyY2g_cT1wbGF5d3JpZ2h0JnFwdnQ9cGxheXdyaWdodCZGT1JNPUlRRlJNTA&ntb=1
+              - generic [ref=e808]:
+                - text: See all images
+                - img [ref=e810]
+        - listitem [ref=e813]:
+          - generic [ref=e814]:
+            - heading "Deep dive into playwright" [level=2] [ref=e815]:
+              - text: Deep dive into
+              - strong [ref=e816]: playwright
+            - list [ref=e817]:
+              - listitem [ref=e818]:
+                - link "playwright install" [ref=e819] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=a59076f0e653dc09e807d6547776f8bc962c3e7b98a7d6a2a8b2b10bbc062dacJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQraW5zdGFsbCZGT1JNPVFTUkUx&ntb=1
+                  - generic [ref=e821]:
+                    - text: playwright
+                    - strong [ref=e822]: install
+              - listitem [ref=e823]:
+                - link "playwright github" [ref=e824] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=a502f1c60bd72e578c75bad579c141cf145c8388197c342e185b25ebd378d8afJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrR2l0SHViJkZPUk09UVNSRTI&ntb=1
+                  - generic [ref=e826]:
+                    - text: playwright
+                    - strong [ref=e827]: github
+              - listitem [ref=e828]:
+                - link "playwright automation" [ref=e829] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=f007d791fec63af044166bc196bbbed03fefd3e7e792c5010824e864ffb990bfJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrYXV0b21hdGlvbiZGT1JNPVFTUkUz&ntb=1
+                  - generic [ref=e831]:
+                    - text: playwright
+                    - strong [ref=e832]: automation
+              - listitem [ref=e833]:
+                - link "playwright download" [ref=e834] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=104a372e3413a916ab7997ef1dda4fda2e1bf90bac6d390b973f634d43caad9eJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrZG93bmxvYWQmRk9STT1RU1JFNA&ntb=1
+                  - generic [ref=e836]:
+                    - text: playwright
+                    - strong [ref=e837]: download
+              - listitem [ref=e838]:
+                - link "playwright documentation" [ref=e839] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=f202b9eb1352a5639aa4a9848edf65df36fe05e63a70e507b4dc4949dadc8079JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrZG9jdW1lbnRhdGlvbiZGT1JNPVFTUkU1&ntb=1
+                  - generic [ref=e841]:
+                    - text: playwright
+                    - strong [ref=e842]: documentation
+              - listitem [ref=e843]:
+                - link "playwrite" [ref=e844] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=ac65d86eb76671b72bb9842879f2c361dcd09723d50c46059328afb5ad29bedeJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cml0ZSZGT1JNPVFTUkU2&ntb=1
+                  - strong [ref=e847]: playwrite
+              - listitem [ref=e848]:
+                - link "playwright agents" [ref=e849] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=3902f644d22ba785ebc9e142b656f64eb191cda4fc9bc860a0617045a5ffc935JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrYWdlbnRzJkZPUk09UVNSRTc&ntb=1
+                  - generic [ref=e851]:
+                    - text: playwright
+                    - strong [ref=e852]: agents
+              - listitem [ref=e853]:
+                - link "playwright ai" [ref=e854] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=461adb2c2647a7edc48766e1bc614546920a57a190bced16645dd4da544267f8JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrYWkmRk9STT1RU1JFOA&ntb=1
+                  - generic [ref=e856]:
+                    - text: playwright
+                    - strong [ref=e857]: ai
+        - listitem [ref=e858]:
+          - navigation "More results for playwright":
+            - list:
+              - listitem [ref=e859]
+              - listitem [ref=e861]:
+                - generic "Page 1" [ref=e862]: "1"
+              - listitem [ref=e863]:
+                - link "Page 2" [ref=e864] [cursor=pointer]:
+                  - /url: /search?q=playwright&sp=-1&lq=0&pq=&sc=0-0&qs=n&sk=&cvid=7FE5D57C610942E4B4FDEE5D1BE5FB29&FPIG=487CC3B108334D3985B09A494A433FDA&first=11&FORM=PERE
+                  - text: "2"
+              - listitem [ref=e865]:
+                - link "Page 3" [ref=e866] [cursor=pointer]:
+                  - /url: /search?q=playwright&sp=-1&lq=0&pq=&sc=0-0&qs=n&sk=&cvid=7FE5D57C610942E4B4FDEE5D1BE5FB29&FPIG=487CC3B108334D3985B09A494A433FDA&first=21&FORM=PERE1
+                  - text: "3"
+              - listitem [ref=e867]:
+                - link "Next page" [ref=e868] [cursor=pointer]:
+                  - /url: /search?q=playwright&sp=-1&lq=0&pq=&sc=0-0&qs=n&sk=&cvid=7FE5D57C610942E4B4FDEE5D1BE5FB29&FPIG=487CC3B108334D3985B09A494A433FDA&first=11&FORM=PORE
+      - complementary "Additional Results" [ref=e869]:
+        - list [ref=e870]:
+          - listitem [ref=e871]:
+            - generic "Related searches" [ref=e872]:
+              - generic [ref=e874]:
+                - heading "Deep dive into playwright" [level=2] [ref=e876]:
+                  - text: Deep dive into
+                  - strong [ref=e877]: playwright
+                - generic [ref=e878]:
+                  - link "playwright install" [ref=e880] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=d04cef421678aa42dbaabeb8ace417660285d51841f8c58524a075ccdd344c23JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQraW5zdGFsbCZGT1JNPVI1RkQ&ntb=1
+                    - generic [ref=e882]:
+                      - text: playwright
+                      - strong [ref=e883]: install
+                  - link "playwright github" [ref=e885] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=5924fe104725bed0206228ada4ffa874ade9af97e8be3bd499f0660c9c6fe7eeJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrR2l0SHViJkZPUk09UjVGRDE&ntb=1
+                    - generic [ref=e887]:
+                      - text: playwright
+                      - strong [ref=e888]: github
+                  - link "playwright automation" [ref=e890] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=db27ea365dca3b12a444592835b8b2a73214905d901e5bdf00ec7ea681358a0dJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrYXV0b21hdGlvbiZGT1JNPVI1RkQy&ntb=1
+                    - generic [ref=e892]:
+                      - text: playwright
+                      - strong [ref=e893]: automation
+                  - link "playwright download" [ref=e895] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=ea4b178ddf3381095ea6c1e7841e487d9f87530f3734692c388b8e91a055d073JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrZG93bmxvYWQmRk9STT1SNUZEMw&ntb=1
+                    - generic [ref=e897]:
+                      - text: playwright
+                      - strong [ref=e898]: download
+                  - link "playwright documentation" [ref=e900] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=5964042c1fb8ba7f5bab1d12f26e516c1d21999a3b491fb7018a8f3d86ff6423JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrZG9jdW1lbnRhdGlvbiZGT1JNPVI1RkQ0&ntb=1
+                    - generic [ref=e902]:
+                      - text: playwright
+                      - strong [ref=e903]: documentation
+                  - link "playwrite" [ref=e905] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=32928e56003ae6eaf16607a2e506156acc4437d28ded40e4d9070e73ad495875JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cml0ZSZGT1JNPVI1RkQ1&ntb=1
+                    - strong [ref=e908]: playwrite
+                  - link "playwright agents" [ref=e910] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=fda9b5e996b22cb34dd82b57bdb4fdda7ca82411fd8e95d3c1744f72cf0de13bJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrYWdlbnRzJkZPUk09UjVGRDY&ntb=1
+                    - generic [ref=e912]:
+                      - text: playwright
+                      - strong [ref=e913]: agents
+                  - link "playwright ai" [ref=e915] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=0f55b21bfb8c7916d91f20a7e052943a66985fa2951f9c0eaf21b3caa3f3fe43JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1L3NlYXJjaD9xPXBsYXl3cmlnaHQrYWkmRk9STT1SNUZENw&ntb=1
+                    - generic [ref=e917]:
+                      - text: playwright
+                      - strong [ref=e918]: ai
+  - contentinfo [ref=e919]:
+    - generic [ref=e920]:
+      - list:
+        - listitem [ref=e921]:
+          - link "Privacy" [ref=e922] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4c35371e05a65d01a463e01dfd782315dd03d61837ae1bd88f511933a908e751JmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=e923]:
+          - link "Terms" [ref=e924] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=cf03acb0caf4a45bb99772fe5d66c7eb130e71d4e83fecb75efd96e4dc9830ccJmltdHM9MTc4Mjg2NDAwMA&ptn=3&ver=2&hsh=4&fclid=03cd4eb8-ec89-68eb-3c66-5931edc3699f&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1
+  - generic [ref=e926]:
+    - generic:
+      - generic:
+        - generic:
+          - generic [ref=e928]:
+            - search [ref=e929]:
+              - textbox "Ask a follow-up" [ref=e930]:
+                - /placeholder: "Ask a follow-up "
+            - button "Send" [ref=e932] [cursor=pointer]:
+              - img [ref=e934]
+          - navigation [ref=e937]:
+            - link "Playwright vs Selenium" [ref=e938] [cursor=pointer]:
+              - /url: /copilotsearch?q=Playwright+vs+Selenium&form=CSBSUG
+            - link "Playwright VS Cypress" [ref=e939] [cursor=pointer]:
+              - /url: /copilotsearch?q=Playwright+VS+Cypress&form=CSBSUG
+            - link "Playwright VS Puppeteer" [ref=e940] [cursor=pointer]:
+              - /url: /copilotsearch?q=Playwright+VS+Puppeteer&form=CSBSUG
+  - dialog "Quick Search"
+```

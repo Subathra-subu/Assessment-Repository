@@ -1,0 +1,828 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: PlaywrightCommands.test.ts >> Commands test
+- Location: tests\PlaywrightCommands.test.ts:5:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('//textarea[@name=\'q\']')
+    - locator resolved to <textarea name="q" rows="1" autofocus="" type="search" id="sb_form_q" role="combobox" maxlength="2000" aria-owns="sw_as" autocorrect="off" inputmode="search" autocomplete="off" spellcheck="false" aria-expanded="false" aria-controls="sw_as" autocapitalize="none" enterkeyhint="search" aria-autocomplete="both" placeholder="Search the web" class="sb_form_q hp_fadein_ph hp_fadein_show" aria-label="Enter your search here - Search suggestions will show as you type"></textarea>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - heading "Microsoft Logo Image" [level=1] [ref=e19]:
+          - img "Microsoft Logo Image" [ref=e20] [cursor=pointer]
+        - navigation [ref=e28]:
+          - menubar [ref=e29]:
+            - menuitem "Copilot" [ref=e30] [cursor=pointer]:
+              - link "Copilot" [ref=e31]:
+                - /url: /chat?FORM=hpcodx&intent=bing
+                - generic [ref=e33]: Copilot
+            - menuitem "Images" [ref=e34] [cursor=pointer]:
+              - link "Images" [ref=e35]:
+                - /url: /images?FORM=Z9LH
+            - menuitem "Videos" [ref=e36] [cursor=pointer]:
+              - link "Videos" [ref=e37]:
+                - /url: /videos?FORM=Z9LH1
+            - menuitem "Shopping" [ref=e38] [cursor=pointer]:
+              - link "Shopping" [ref=e39]:
+                - /url: /shop?FORM=Z9LHS4
+            - menuitem "Maps" [ref=e40] [cursor=pointer]:
+              - link "Maps" [ref=e41]:
+                - /url: /maps?FORM=Z9LH2
+            - menuitem "News" [ref=e42] [cursor=pointer]:
+              - link "News" [ref=e43]:
+                - /url: /news/search?q=Top+stories&nvaug=%5bNewsVertical+Category%3d%22rt_MaxClass%22%5d&FORM=Z9LH3
+            - menuitem ". . . More" [ref=e44] [cursor=pointer]:
+              - text: . . .
+              - button "More" [ref=e45]
+      - complementary "Account Rewards and Preferences" [ref=e48]:
+        - link "Sign in Sign in" [ref=e49] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e50]: Sign in
+          - generic "Sign in" [ref=e51]
+        - button "Microsoft Rewards" [ref=e52] [cursor=pointer]:
+          - generic [ref=e54]:
+            - generic [ref=e55]: Rewards
+            - img [ref=e57]
+        - button "Mobile" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: Mobile
+          - img [ref=e64]
+        - button "Settings and quick links" [ref=e67] [cursor=pointer]
+    - generic [ref=e68]:
+      - search [ref=e69]:
+        - img [ref=e71] [cursor=pointer]
+        - combobox "Enter your search here - Search suggestions will show as you type" [active] [ref=e75]:
+          - status [ref=e77]
+        - button "Search using voice" [ref=e79] [cursor=pointer]:
+          - img [ref=e80]
+        - button "Search using an image" [ref=e85] [cursor=pointer]
+        - link "Open Copilot" [ref=e86] [cursor=pointer]:
+          - /url: /chat?FORM=hpcodx&intent=bing
+        - group "Languages:" [ref=e90]:
+          - generic [ref=e91]: "Languages:"
+          - link "Hindi" [ref=e92] [cursor=pointer]:
+            - /url: /?setlang=hi&cc=in&cc=IN
+            - text: हिंदी
+          - link "Bangla" [ref=e93] [cursor=pointer]:
+            - /url: /?setlang=bn&cc=in&cc=IN
+            - text: বাংলা
+          - link "Urdu" [ref=e94] [cursor=pointer]:
+            - /url: /?setlang=ur&cc=in&cc=IN
+            - text: اردو
+          - link "Punjabi (Gurmukhi)" [ref=e95] [cursor=pointer]:
+            - /url: /?setlang=pa-guru&cc=in&cc=IN
+            - text: ਪੰਜਾਬੀ
+          - link "Marathi" [ref=e96] [cursor=pointer]:
+            - /url: /?setlang=mr&cc=in&cc=IN
+            - text: मराठी
+          - link "Telugu" [ref=e97] [cursor=pointer]:
+            - /url: /?setlang=te&cc=in&cc=IN
+            - text: తెలుగు
+          - link "Tamil" [ref=e98] [cursor=pointer]:
+            - /url: /?setlang=ta&cc=in&cc=IN
+            - text: தமிழ்
+          - link "Kannada" [ref=e99] [cursor=pointer]:
+            - /url: /?setlang=kn&cc=in&cc=IN
+            - text: ಕನ್ನಡ
+          - link "Gujarati" [ref=e100] [cursor=pointer]:
+            - /url: /?setlang=gu&cc=in&cc=IN
+            - text: ગુજરાતી
+          - link "Malayalam" [ref=e101] [cursor=pointer]:
+            - /url: /?setlang=ml&cc=in&cc=IN
+            - text: മലയാളം
+          - link "Odia" [ref=e102] [cursor=pointer]:
+            - /url: /?setlang=or&cc=in&cc=IN
+            - text: ଓଡ଼ିଆ
+      - generic [ref=e105]:
+        - link "Create Wallpaper" [ref=e106] [cursor=pointer]:
+          - /url: /search?q=create wallpaper&filters=aimode%3A%2235%22&FORM=bichpw
+          - generic [ref=e108]: Create Wallpaper
+        - link "Video creator" [ref=e109] [cursor=pointer]:
+          - /url: /images/create/ai-video-generator?bicsource=hp&FORM=bvcbhp
+          - generic [ref=e111]: Video creator
+        - link "Text creator" [ref=e112] [cursor=pointer]:
+          - /url: /search?q=bing ai writing&FORM=btcbhp
+          - generic [ref=e114]: Text creator
+  - generic [ref=e117]:
+    - generic [ref=e118]:
+      - dialog "Bing homepage quiz Which river creates the dramatic drop at Jog Falls?" [ref=e120]:
+        - group "Bing homepage quiz Which river creates the dramatic drop at Jog Falls?" [ref=e121]:
+          - generic [ref=e122]: Bing homepage quiz
+          - generic [ref=e123]: Which river creates the dramatic drop at Jog Falls?
+          - list [ref=e124]:
+            - listitem [ref=e125]:
+              - 'link "Answer: A, Sharavathi, 1 of 3" [ref=e126] [cursor=pointer]':
+                - /url: /search?q=Sharavathi&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260701_JogFalls2026%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%220%22+UserChoices%3A%220%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%221%22&FORM=HPQUIZ
+                - generic [ref=e127]: A
+                - text: Sharavathi
+            - listitem [ref=e128]:
+              - 'link "Answer: B, Ganga, 2 of 3" [ref=e129] [cursor=pointer]':
+                - /url: /search?q=Sharavathi&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260701_JogFalls2026%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%221%22+UserChoices%3A%221%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%220%22&FORM=HPQUIZ
+                - generic [ref=e130]: B
+                - text: Ganga
+            - listitem [ref=e131]:
+              - 'link "Answer: C, Cauvery, 3 of 3" [ref=e132] [cursor=pointer]':
+                - /url: /search?q=Sharavathi&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260701_JogFalls2026%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%222%22+UserChoices%3A%222%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%220%22&FORM=HPQUIZ
+                - generic [ref=e133]: C
+                - text: Cauvery
+      - generic [ref=e134]:
+        - generic:
+          - generic:
+            - link "Get the Bing Wallpaper app":
+              - /url: https://go.microsoft.com/fwlink/?linkid=2127455
+              - generic: Get the Bing Wallpaper app
+          - 'heading "Image of the day: Jog Falls on the Sharavathi River, Shivamogga district, Karnataka" [level=3]':
+            - 'link "Image of the day: Jog Falls on the Sharavathi River, Shivamogga district, Karnataka"':
+              - /url: /search?q=Jog+Falls&form=hpcapt&filters=HpDate:"20260630_1830"+mgzv3configlist:"BingQA_Encyclopedia_Layout"
+              - text: Jog Falls on the Sharavathi River, Shivamogga district, Karnataka
+          - generic:
+            - generic: © Amith Nag Photography/Moment/Getty Images
+            - list:
+              - listitem:
+                - button "Download this image. Use of this image is restricted to wallpaper only."
+        - generic [ref=e135]:
+          - link "The art of taking the plunge" [ref=e137] [cursor=pointer]:
+            - /url: /search?q=Jog+Falls&form=hpcapt&filters=HpDate:"20260630_1830"+mgzv3configlist:"BingQA_Encyclopedia_Layout"
+            - img [ref=e139]
+            - heading "The art of taking the plunge" [level=2] [ref=e142]
+          - generic [ref=e143] [cursor=pointer]:
+            - status [ref=e144]
+            - button "Previous image" [ref=e145]
+            - button "Next image" [disabled] [ref=e147]
+    - button "Feedback" [ref=e149] [cursor=pointer]:
+      - img [ref=e150]
+      - generic: Feedback
+    - generic [ref=e152]:
+      - region "Trending on Bing" [ref=e153]:
+        - generic:
+          - status [ref=e154]
+          - button "Toggle feed area position" [expanded] [ref=e155] [cursor=pointer]
+          - button "Previous news" [disabled]
+          - button "More news" [ref=e157] [cursor=pointer]
+        - list [ref=e159]:
+          - listitem [ref=e160]:
+            - list [ref=e161]:
+              - listitem [ref=e162] [cursor=pointer]:
+                - link "ISRO satellite captures monsoon's big push from space, rain clouds shroud India © India Today" [ref=e163]:
+                  - /url: /search?q=ISRO+satellite+captures+monsoon%27s+big+push+from+space%2c+rain+clouds+shroud+India&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_19E6E8D3A79500FD58F26ADC066C581E%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%220%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e164]:
+                    - heading "ISRO satellite captures monsoon's big push from space, rain clouds shroud India" [level=2] [ref=e165]:
+                      - generic [ref=e166]: ISRO satellite captures monsoon's big push from space, rain clouds shroud India
+                    - img "© India Today" [ref=e167]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/techandscience/isro-satellite-captures-monsoon-s-big-push-from-space-rain-clouds-shroud-india/ar-AA26WFPi?ocid=TobArticle
+                      - img [ref=e168]
+              - listitem [ref=e171] [cursor=pointer]:
+                - 'link "‘Wanted to marry Ketan’: Siya Goyal''s brother under scanner for ‘staying silent’ © Times Now" [ref=e172]':
+                  - /url: /search?q=%e2%80%98Wanted+to+marry+Ketan%e2%80%99%3a+Siya+Goyal%27s+brother+under+scanner+for+%e2%80%98staying+silent%e2%80%99&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_FB5D21810A03C29C1519FB4EFC160859%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%221%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e173]:
+                    - 'heading "‘Wanted to marry Ketan’: Siya Goyal''s brother under scanner for ‘staying silent’" [level=2] [ref=e174]':
+                      - generic [ref=e175]: "‘Wanted to marry Ketan’: Siya Goyal's brother under scanner for ‘staying silent’"
+                    - img "© Times Now" [ref=e176]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/money/markets/wanted-to-marry-ketan-siya-goyal-s-brother-under-scanner-for-staying-silent/ar-AA26W7DL?ocid=TobArticle
+                      - img [ref=e177]
+              - listitem [ref=e180] [cursor=pointer]:
+                - 'link "''World order will collapse'': Pakistan''s cry for help over Indus waters © NDTV World" [ref=e181]':
+                  - /url: /search?q=%27World+order+will+collapse%27%3a+Pakistan%27s+cry+for+help+over+Indus+waters&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_345C65DB3F2A49741455E675AEA0A570%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%222%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e182]:
+                    - 'heading "''World order will collapse'': Pakistan''s cry for help over Indus waters" [level=2] [ref=e183]':
+                      - generic [ref=e184]: "'World order will collapse': Pakistan's cry for help over Indus waters"
+                    - img "© NDTV World" [ref=e185]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/money/news/world-order-will-collapse-pakistan-s-cry-for-help-over-indus-waters/ar-AA26XCoS?ocid=TobArticle
+                      - img [ref=e186]
+              - listitem [ref=e189] [cursor=pointer]:
+                - link "UP hospital woman employee caught kicking patient 10 times in 35 seconds, faces suspension © Times Now" [ref=e190]:
+                  - /url: /search?q=UP+hospital+woman+employee+caught+kicking+patient+10+times+in+35+seconds%2c+faces+suspension&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_AE19691A3780A1AD381BB0E3E05D86B2%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%223%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e191]:
+                    - heading "UP hospital woman employee caught kicking patient 10 times in 35 seconds, faces suspension" [level=2] [ref=e192]:
+                      - generic [ref=e193]: UP hospital woman employee caught kicking patient 10 times in 35 seconds, faces suspension
+                    - img "© Times Now" [ref=e194]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/India/up-hospital-woman-employee-caught-kicking-patient-10-times-in-35-seconds-faces-suspension/ar-AA26XrQ8?ocid=TobArticle
+                      - img [ref=e195]
+              - listitem [ref=e198] [cursor=pointer]:
+                - 'link "Ambala borewell tragedy: 19-hour rescue operation ends in heartbreak as 4-year-old declared ''brought dead'' © The Daily Jagran" [ref=e199]':
+                  - /url: /search?q=Ambala+borewell+tragedy%3a+19-hour+rescue+operation+ends+in+heartbreak+as+4-year-old+declared+%27brought+dead%27&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_340417848EAEAFA8D3DF145EFFF4A197%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%224%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e200]:
+                    - 'heading "Ambala borewell tragedy: 19-hour rescue operation ends in heartbreak as 4-year-old declared ''brought dead''" [level=2] [ref=e201]':
+                      - generic [ref=e202]: "Ambala borewell tragedy: 19-hour rescue operation ends in heartbreak as 4-year-old declared 'brought dead'"
+                    - img "© The Daily Jagran" [ref=e203]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/India/ambala-borewell-tragedy-19-hour-rescue-operation-ends-in-heartbreak-as-4-year-old-declared-brought-dead/ar-AA26WZD2?ocid=TobArticle
+                      - img [ref=e204]
+              - listitem [ref=e207] [cursor=pointer]:
+                - link "Kylian Mbappé breaks historic World Cup record; meet the greatest World Cup goalscorers of all time © Indiatimes" [ref=e208]:
+                  - /url: /search?q=Kylian+Mbapp%c3%a9+breaks+historic+World+Cup+record%3b+meet+the+greatest+World+Cup+goalscorers+of+all+time&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_E7A7BFE030FA9DFF30E15D4912354EB2%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%225%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e209]:
+                    - heading "Kylian Mbappé breaks historic World Cup record; meet the greatest World Cup goalscorers of all time" [level=2] [ref=e210]:
+                      - generic [ref=e211]: Kylian Mbappé breaks historic World Cup record; meet the greatest World Cup goalscorers of all time
+                    - img "© Indiatimes" [ref=e212]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/sports/other/kylian-mbappé-breaks-historic-world-cup-record-meet-the-greatest-world-cup-goalscorers-of-all-time/ar-AA26WYZO?ocid=TobArticle
+                      - img [ref=e213]
+              - listitem [ref=e216] [cursor=pointer]:
+                - 'link "''Some get too much'': Sanjay Raut hints Uddhav loyalists are hurt amid mass exits, calls for introspection © Hindustan Times" [ref=e217]':
+                  - /url: /search?q=%27Some+get+too+much%27%3a+Sanjay+Raut+hints+Uddhav+loyalists+are+hurt+amid+mass+exits%2c+calls+for+introspection&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_B0BB80F0D12B3F850878DC1A2100FF14%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%226%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e218]:
+                    - 'heading "''Some get too much'': Sanjay Raut hints Uddhav loyalists are hurt amid mass exits, calls for introspection" [level=2] [ref=e219]':
+                      - generic [ref=e220]: "'Some get too much': Sanjay Raut hints Uddhav loyalists are hurt amid mass exits, calls for introspection"
+                    - img "© Hindustan Times" [ref=e221]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/India/some-get-too-much-sanjay-raut-hints-uddhav-loyalists-are-hurt-amid-mass-exits-calls-for-introspection/ar-AA26XjCX?ocid=TobArticle
+                      - img [ref=e222]
+              - listitem [ref=e225] [cursor=pointer]:
+                - link "Gold prices fall up to 2% as Fed rate hike hopes grow; check today's 22K, 24K rates © News18" [ref=e226]:
+                  - /url: /search?q=Gold+prices+fall+up+to+2%25+as+Fed+rate+hike+hopes+grow%3b+check+today%27s+22K%2c+24K+rates&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_EA85E4D803D3FD6BAB50398F99DCFA46%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%227%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e227]:
+                    - heading "Gold prices fall up to 2% as Fed rate hike hopes grow; check today's 22K, 24K rates" [level=2] [ref=e228]:
+                      - generic [ref=e229]: Gold prices fall up to 2% as Fed rate hike hopes grow; check today's 22K, 24K rates
+                    - img "© News18" [ref=e230]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/money/news/gold-prices-fall-up-to-2-as-fed-rate-hike-hopes-grow-check-today-s-22k-24k-rates/ar-AA26WNzw?ocid=TobArticle
+                      - img [ref=e231]
+              - listitem [ref=e234] [cursor=pointer]:
+                - link "Army soldier held for allegedly killing wife after temple visit in Karnataka © The New Indian Express" [ref=e235]:
+                  - /url: /search?q=Army+soldier+held+for+allegedly+killing+wife+after+temple+visit+in+Karnataka&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_C6E3FBEA55EDD95D88B97928A74AC8C6%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%228%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e236]:
+                    - heading "Army soldier held for allegedly killing wife after temple visit in Karnataka" [level=2] [ref=e237]:
+                      - generic [ref=e238]: Army soldier held for allegedly killing wife after temple visit in Karnataka
+                    - img "© The New Indian Express" [ref=e239]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/India/army-soldier-held-for-allegedly-killing-wife-after-temple-visit-in-karnataka/ar-AA26WMcH?ocid=TobArticle
+                      - img [ref=e240]
+              - listitem [ref=e243] [cursor=pointer]:
+                - link "Nayara, India’s largest private fuel retailer, cuts petrol price by ₹5, diesel by ₹3 © Hindustan Times" [ref=e244]:
+                  - /url: /search?q=Nayara%2c+India%e2%80%99s+largest+private+fuel+retailer%2c+cuts+petrol+price+by+%e2%82%b95%2c+diesel+by+%e2%82%b93&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_86E44C2DAFC730A09F92517344CE73B2%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%229%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e245]:
+                    - heading "Nayara, India’s largest private fuel retailer, cuts petrol price by ₹5, diesel by ₹3" [level=2] [ref=e246]:
+                      - generic [ref=e247]: Nayara, India’s largest private fuel retailer, cuts petrol price by ₹5, diesel by ₹3
+                    - img "© Hindustan Times" [ref=e248]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/India/nayara-india-s-largest-private-fuel-retailer-cuts-petrol-price-by-5-diesel-by-3/ar-AA26WZbT?ocid=TobArticle
+                      - img [ref=e249]
+              - listitem [ref=e252] [cursor=pointer]:
+                - link "Vedanta Iron & Steel shares skyrocket 89% in 12 days since listing. What’s fuelling the surge? © The Economic Times" [ref=e253]:
+                  - /url: /search?q=Vedanta+Iron+%26+Steel+shares+skyrocket+89%25+in+12+days+since+listing.+What%e2%80%99s+fuelling+the+surge%3f&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_C9280234DE97680E60B5B78133DF82E5%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2210%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e254]:
+                    - heading "Vedanta Iron & Steel shares skyrocket 89% in 12 days since listing. What’s fuelling the surge?" [level=2] [ref=e255]:
+                      - generic [ref=e256]: Vedanta Iron & Steel shares skyrocket 89% in 12 days since listing. What’s fuelling the surge?
+                    - img "© The Economic Times" [ref=e257]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/money/markets/vedanta-iron-steel-shares-skyrocket-89-in-12-days-since-listing-what-s-fuelling-the-surge/ar-AA26W54f?ocid=TobArticle
+                      - img [ref=e258]
+              - listitem [ref=e261] [cursor=pointer]:
+                - link "Maharashtra teen dies by suicide; chats allegedly reveal pressure to convert for marriage © Times Now" [ref=e262]:
+                  - /url: /search?q=Maharashtra+teen+dies+by+suicide%3b+chats+allegedly+reveal+pressure+to+convert+for+marriage&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_189E085682153A2C48C9EE96C723B369%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2211%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e263]:
+                    - heading "Maharashtra teen dies by suicide; chats allegedly reveal pressure to convert for marriage" [level=2] [ref=e264]:
+                      - generic [ref=e265]: Maharashtra teen dies by suicide; chats allegedly reveal pressure to convert for marriage
+                    - img "© Times Now" [ref=e266]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/India/maharashtra-teen-dies-by-suicide-chats-allegedly-reveal-pressure-to-convert-for-marriage/ar-AA26Xcww?ocid=TobArticle
+                      - img [ref=e267]
+              - listitem [ref=e270] [cursor=pointer]:
+                - 'link "''He found their photo, then disappeared'': Wife kills husband with lover, buries body under floor; both get life imprisonment © The Daily Jagran" [ref=e271]':
+                  - /url: /search?q=%27He+found+their+photo%2c+then+disappeared%27%3a+Wife+kills+husband+with+lover%2c+buries+body+under+floor%3b+both+get+life+imprisonment&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_386B9957DCD6266BF0F2F6BF37DC14A4%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2212%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e272]:
+                    - 'heading "''He found their photo, then disappeared'': Wife kills husband with lover, buries body under floor; both get life imprisonment" [level=2] [ref=e273]':
+                      - generic [ref=e274]: "'He found their photo, then disappeared': Wife kills husband with lover, buries body under floor; both get life imprisonment"
+                    - img "© The Daily Jagran" [ref=e275]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/India/he-found-their-photo-then-disappeared-wife-kills-husband-with-lover-buries-body-under-floor-both-get-life-imprisonment/ar-AA26XEru?ocid=TobArticle
+                      - img [ref=e276]
+              - listitem [ref=e279] [cursor=pointer]:
+                - link "Deloitte employee retires after 42 wonderful years. Viral video sparks debate on loyalty © Moneycontrol" [ref=e280]:
+                  - /url: /search?q=Deloitte+employee+retires+after+42+wonderful+years.+Viral+video+sparks+debate+on+loyalty&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_A5CAB2F908472C62EED49F550A15E23E%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2213%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e281]:
+                    - heading "Deloitte employee retires after 42 wonderful years. Viral video sparks debate on loyalty" [level=2] [ref=e282]:
+                      - generic [ref=e283]: Deloitte employee retires after 42 wonderful years. Viral video sparks debate on loyalty
+                    - img "© Moneycontrol" [ref=e284]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/other/deloitte-employee-retires-after-42-wonderful-years-viral-video-sparks-debate-on-loyalty/ar-AA26XC5D?ocid=TobArticle
+                      - img [ref=e285]
+              - listitem [ref=e288] [cursor=pointer]:
+                - 'link "Big blow to AIADMK: Former minister C Vijayabaskar to join Vijay''s TVK © ABP - Live" [ref=e289]':
+                  - /url: /search?q=Big+blow+to+AIADMK%3a+Former+minister+C+Vijayabaskar+to+join+Vijay%27s+TVK&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_4648C3E29F9ADEE4AA2221A023F7CEFD%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2214%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e290]:
+                    - 'heading "Big blow to AIADMK: Former minister C Vijayabaskar to join Vijay''s TVK" [level=2] [ref=e291]':
+                      - generic [ref=e292]: "Big blow to AIADMK: Former minister C Vijayabaskar to join Vijay's TVK"
+                    - img "© ABP - Live" [ref=e293]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/autos/photos/big-blow-to-aiadmk-former-minister-c-vijayabaskar-to-join-vijay-s-tvk/ar-AA26XoJz?ocid=TobArticle
+                      - img [ref=e294]
+              - listitem [ref=e297] [cursor=pointer]:
+                - 'link "Live in anxiety: Indian woman opens up about reverse culture shock after moving back from US © News18" [ref=e298]':
+                  - /url: /search?q=Live+in+anxiety%3a+Indian+woman+opens+up+about+reverse+culture+shock+after+moving+back+from+US&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_3F2C318ECBA0F63CE014640DD2FADB7F%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2215%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e299]:
+                    - 'heading "Live in anxiety: Indian woman opens up about reverse culture shock after moving back from US" [level=2] [ref=e300]':
+                      - generic [ref=e301]: "Live in anxiety: Indian woman opens up about reverse culture shock after moving back from US"
+                    - img "© News18" [ref=e302]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/India/live-in-anxiety-indian-woman-opens-up-about-reverse-culture-shock-after-moving-back-from-us/ar-AA26XMb5?ocid=TobArticle
+                      - img [ref=e303]
+              - listitem [ref=e306] [cursor=pointer]:
+                - link "Why Trump congratulated China's Xi Jinping after birthright citizenship ruling by SCOTUS? WION decodes © WION" [ref=e307]:
+                  - /url: /search?q=Why+Trump+congratulated+China%27s+Xi+Jinping+after+birthright+citizenship+ruling+by+SCOTUS%3f+WION+decodes&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_A84CF07841916357B047FCD3CAAF9B0E%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2216%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e308]:
+                    - heading "Why Trump congratulated China's Xi Jinping after birthright citizenship ruling by SCOTUS? WION decodes" [level=2] [ref=e309]:
+                      - generic [ref=e310]: Why Trump congratulated China's Xi Jinping after birthright citizenship ruling by SCOTUS? WION decodes
+                    - img "© WION" [ref=e311]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/world/why-trump-congratulated-china-s-xi-jinping-after-birthright-citizenship-ruling-by-scotus-wion-decodes/ar-AA26W9DO?ocid=TobArticle
+                      - img [ref=e312]
+              - listitem [ref=e315] [cursor=pointer]:
+                - link "Hindu groups hold rally in Karnataka's Kushalnagar against alleged religious conversions © The New Indian Express" [ref=e316]:
+                  - /url: /search?q=Hindu+groups+hold+rally+in+Karnataka%27s+Kushalnagar+against+alleged+religious+conversions&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_7EC543B453E2445FFA5800F4BB44855D%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2217%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e317]:
+                    - heading "Hindu groups hold rally in Karnataka's Kushalnagar against alleged religious conversions" [level=2] [ref=e318]:
+                      - generic [ref=e319]: Hindu groups hold rally in Karnataka's Kushalnagar against alleged religious conversions
+                    - img "© The New Indian Express" [ref=e320]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/news/other/hindu-groups-hold-rally-in-karnataka-s-kushalnagar-against-alleged-religious-conversions/ar-AA26WbPP?ocid=TobArticle
+                      - img [ref=e321]
+              - listitem [ref=e324] [cursor=pointer]:
+                - 'link "Mumbai tree collapse: ''He has to go play cricket'' - Mother''s heartbreaking wait after 11-year-old son''s death © Moneycontrol" [ref=e325]':
+                  - /url: /search?q=Mumbai+tree+collapse%3a+%27He+has+to+go+play+cricket%27+-+Mother%27s+heartbreaking+wait+after+11-year-old+son%27s+death&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_F775F9AA416FCCB399CD71FC97DEB4DC%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2218%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e326]:
+                    - 'heading "Mumbai tree collapse: ''He has to go play cricket'' - Mother''s heartbreaking wait after 11-year-old son''s death" [level=2] [ref=e327]':
+                      - generic [ref=e328]: "Mumbai tree collapse: 'He has to go play cricket' - Mother's heartbreaking wait after 11-year-old son's death"
+                    - img "© Moneycontrol" [ref=e329]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/money/topstories/mumbai-tree-collapse-he-has-to-go-play-cricket-mother-s-heartbreaking-wait-after-11-year-old-son-s-death/ar-AA26WQXs?ocid=TobArticle
+                      - img [ref=e330]
+              - listitem [ref=e333] [cursor=pointer]:
+                - link "Microsoft plans another round of layoffs, may cut thousands of jobs across teams in ... © The Times of India" [ref=e334]:
+                  - /url: /search?q=Microsoft+plans+another+round+of+layoffs%2c+may+cut+thousands+of+jobs+across+teams+in+...&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_FDFE7D0022D4E38A5320D06B890061AF%22+tnVersion%3a%22b347362b-cd05-4f94-b8de-38d98463520c%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2219%22+tnOrder%3a%22167a4688-5e44-4135-ada9-f09ac5d27df3%22&form=HPNN01
+                  - generic [ref=e335]:
+                    - heading "Microsoft plans another round of layoffs, may cut thousands of jobs across teams in ..." [level=2] [ref=e336]:
+                      - generic [ref=e337]: Microsoft plans another round of layoffs, may cut thousands of jobs across teams in ...
+                    - img "© The Times of India" [ref=e338]
+                    - link "Read Article":
+                      - /url: https://www.msn.com/en-in/money/news/microsoft-plans-another-round-of-layoffs-may-cut-thousands-of-jobs-across-teams-in/ar-AA26Wocn?ocid=TobArticle
+                      - img [ref=e339]
+      - complementary [ref=e342]:
+        - generic [ref=e344]:
+          - generic [ref=e345]: DISCOVER
+          - main [ref=e352]:
+            - generic [ref=e355]:
+              - 'article "Mumbai horror: School bus crushed by falling tree in Mumbai; one child dead, five injured" [ref=e359] [cursor=pointer]':
+                - generic [ref=e361]:
+                  - img [ref=e362]
+                  - generic [ref=e365]:
+                    - generic [ref=e366]:
+                      - generic [ref=e367]:
+                        - generic [ref=e368]:
+                          - img [ref=e369]
+                          - generic [ref=e370]: The Times of India
+                        - generic [ref=e371]: ·
+                        - generic [ref=e372]: 12h
+                      - 'link "Mumbai horror: School bus crushed by falling tree in Mumbai; one child dead, five injured, The Times of India" [ref=e373]':
+                        - /url: https://www.msn.com/en-in/news/india/mumbai-horror-school-bus-crushed-by-falling-tree-in-mumbai-one-child-dead-five-injured/vi-AA26TLYE
+                        - text: "Mumbai horror: School bus crushed by falling tree in Mumbai; one child dead, five injured"
+                    - 'generic "Mumbai horror: School bus crushed by falling tree in Mumbai; one child dead, five injured" [ref=e377]':
+                      - generic [ref=e379]:
+                        - generic [ref=e380]:
+                          - button "56 Likes" [ref=e381]:
+                            - generic [ref=e382]:
+                              - img [ref=e383]
+                              - generic [ref=e385]: "56"
+                          - button "Dislike" [ref=e386]:
+                            - img [ref=e388]
+                        - link "Start the conversation" [ref=e391]:
+                          - /url: https://www.msn.com/en-in/news/india/mumbai-horror-school-bus-crushed-by-falling-tree-in-mumbai-one-child-dead-five-injured/vi-AA26TLYE#comments
+                          - button "Start the conversation" [ref=e392]:
+                            - img [ref=e393]
+                  - generic [ref=e395]:
+                    - button "Hide this story" [ref=e396]:
+                      - img [ref=e397]
+                      - text: Hide this story
+                    - button "See more" [ref=e398]:
+                      - img [ref=e399]
+              - 'article "Ketan murder: Video of Ketan, Siya''s families dancing at private event emerges amid probe" [ref=e400] [cursor=pointer]':
+                - generic [ref=e402]:
+                  - generic [ref=e408]:
+                    - generic [ref=e409]:
+                      - generic [ref=e410]:
+                        - generic [ref=e411]:
+                          - img [ref=e412]
+                          - generic [ref=e413]: NDTV 24x7
+                        - generic [ref=e414]: ·
+                        - generic [ref=e415]: 7h
+                      - 'link "Ketan murder: Video of Ketan, Siya''s families dancing at private event emerges amid probe, NDTV 24x7" [ref=e416]':
+                        - /url: https://www.msn.com/en-in/news/other/ketan-murder-video-of-ketan-siya-s-families-dancing-at-private-event-emerges-amid-probe/vi-AA26WEkB
+                        - text: "Ketan murder: Video of Ketan, Siya's families dancing at private event emerges amid probe"
+                    - 'generic "Ketan murder: Video of Ketan, Siya''s families dancing at private event emerges amid probe" [ref=e420]':
+                      - generic [ref=e422]:
+                        - generic [ref=e423]:
+                          - button "32 Likes" [ref=e424]:
+                            - generic [ref=e425]:
+                              - img [ref=e426]
+                              - generic [ref=e428]: "32"
+                          - button "Dislike" [ref=e429]:
+                            - img [ref=e431]
+                        - link "Start the conversation" [ref=e434]:
+                          - /url: https://www.msn.com/en-in/news/other/ketan-murder-video-of-ketan-siya-s-families-dancing-at-private-event-emerges-amid-probe/vi-AA26WEkB#comments
+                          - button "Start the conversation" [ref=e435]:
+                            - img [ref=e436]
+                  - generic [ref=e438]:
+                    - button "Hide this story" [ref=e439]:
+                      - img [ref=e440]
+                      - text: Hide this story
+                    - button "See more" [ref=e441]:
+                      - img [ref=e442]
+              - article [ref=e443] [cursor=pointer]:
+                - generic [ref=e449]:
+                  - generic [ref=e451]:
+                    - img "World Cup coverage" [ref=e453]
+                    - link "World Cup coverage" [ref=e454]:
+                      - /url: https://www.msn.com/en-in/sports/football/fifa_world_cup?uxmode=ruby&ocid=BingHp01&cvid=de1a73b2dda7462aec54f7a43d08cf73
+                      - heading "World Cup coverage" [level=2] [ref=e455]
+                    - button "More interests" [ref=e456]
+                    - generic [ref=e457]:
+                      - generic "Trending now" [ref=e458]:
+                        - button "Trending now" [ref=e459]
+                      - button "More options" [ref=e460]
+                  - generic [ref=e464]:
+                    - link "Mexico Final · 1 Jul 2 - 0 Ecuador" [ref=e466]:
+                      - /url: https://www.msn.com/en-in/sports/football/fifa_world_cup/game-center/sp-id-53452563?uxmode=ruby&ocid=BingHp01&cvid=de1a73b2dda7462aec54f7a43d08cf73
+                      - generic [ref=e467]:
+                        - generic [ref=e468]:
+                          - generic [ref=e469]:
+                            - button "Click to follow Mexico":
+                              - generic:
+                                - img
+                          - generic "Mexico" [ref=e470]
+                        - generic [ref=e472]:
+                          - generic "1 Jul - Final" [ref=e473]: Final · 1 Jul
+                          - generic [ref=e474]:
+                            - generic [ref=e475]:
+                              - img [ref=e477]
+                              - generic [ref=e479]: "2"
+                            - generic [ref=e480]: "-"
+                            - generic [ref=e482]: "0"
+                        - generic [ref=e483]:
+                          - generic [ref=e484]:
+                            - button "Click to follow Ecuador":
+                              - generic:
+                                - img
+                          - generic "Ecuador" [ref=e485]
+                    - link "France Final · 1 Jul 3 - 0 Sweden" [ref=e487]:
+                      - /url: https://www.msn.com/en-in/sports/football/fifa_world_cup/game-center/sp-id-53452543?uxmode=ruby&ocid=BingHp01&cvid=de1a73b2dda7462aec54f7a43d08cf73
+                      - generic [ref=e488]:
+                        - generic [ref=e489]:
+                          - generic [ref=e490]:
+                            - button "Click to follow France":
+                              - generic:
+                                - img
+                          - generic "France" [ref=e491]
+                        - generic [ref=e493]:
+                          - generic "1 Jul - Final" [ref=e494]: Final · 1 Jul
+                          - generic [ref=e495]:
+                            - generic [ref=e496]:
+                              - img [ref=e498]
+                              - generic [ref=e500]: "3"
+                            - generic [ref=e501]: "-"
+                            - generic [ref=e503]: "0"
+                        - generic [ref=e504]:
+                          - generic [ref=e505]:
+                            - button "Click to follow Sweden":
+                              - generic:
+                                - img
+                          - generic "Sweden" [ref=e506]
+                    - link "Ivory Coast Final · 30 Jun 1 - 2 Norway" [ref=e508]:
+                      - /url: https://www.msn.com/en-in/sports/football/fifa_world_cup/game-center/sp-id-53452561?uxmode=ruby&ocid=BingHp01&cvid=de1a73b2dda7462aec54f7a43d08cf73
+                      - generic [ref=e509]:
+                        - generic [ref=e510]:
+                          - generic [ref=e511]:
+                            - button "Click to follow Ivory Coast":
+                              - generic:
+                                - img
+                          - generic "Ivory Coast" [ref=e512]
+                        - generic [ref=e514]:
+                          - generic "30 Jun - Final" [ref=e515]: Final · 30 Jun
+                          - generic [ref=e516]:
+                            - generic [ref=e518]: "1"
+                            - generic [ref=e519]: "-"
+                            - generic [ref=e520]:
+                              - generic [ref=e521]: "2"
+                              - img [ref=e523]
+                        - generic [ref=e525]:
+                          - generic [ref=e526]:
+                            - button "Click to follow Norway":
+                              - generic:
+                                - img
+                          - generic "Norway" [ref=e527]
+                  - generic [ref=e529]:
+                    - generic [ref=e530]:
+                      - generic "Previous" [ref=e531]:
+                        - button "Previous" [ref=e532]
+                      - tablist [ref=e534]:
+                        - tab "tab-0" [selected] [ref=e535]
+                        - tab "tab-1" [ref=e537]
+                        - tab "tab-2" [ref=e539]
+                        - tab "tab-3" [ref=e541]
+                        - tab "tab-4" [ref=e543]
+                        - tab "tab-5"
+                        - tab "tab-6"
+                        - tab "tab-7"
+                        - tab "tab-8"
+                        - tab "tab-9"
+                        - tab "tab-10"
+                        - tab "tab-11"
+                        - tab "tab-12"
+                        - tab "tab-13"
+                      - generic "Next" [ref=e545]:
+                        - button "Next" [ref=e546]
+                    - link "See more World Cup coverage" [ref=e548]:
+                      - /url: https://www.msn.com/en-in/sports/football/fifa_world_cup?uxmode=ruby&ocid=BingHp01&cvid=de1a73b2dda7462aec54f7a43d08cf73
+              - article [ref=e549] [cursor=pointer]:
+                - generic [ref=e554]:
+                  - generic [ref=e556]:
+                    - link "Top stories" [ref=e558]:
+                      - /url: https://www.msn.com/en-in/channel/topic/Top%20stories/tp-Y_0b495ad3-9beb-45f8-9214-c8e95aa2468f?cvid=de1a73b2dda7462aec54f7a43d08cf73&ocid=BingHp01
+                      - heading "Top stories" [level=2] [ref=e559]
+                    - button "More options" [ref=e561]
+                  - list [ref=e564]:
+                    - listitem [ref=e565]:
+                      - link "NDTV 24x7 52m Plot to topple Vijay government? Rs 35 crore claim, 3 arrests and 'DMK link'" [ref=e566]:
+                        - /url: https://www.msn.com/en-in/news/india/plot-to-topple-vijay-government-rs-35-crore-claim-3-arrests-and-dmk-link/ar-AA26Y5A6
+                        - generic [ref=e567]:
+                          - generic [ref=e568]:
+                            - img [ref=e569]
+                            - generic [ref=e570]:
+                              - generic: NDTV 24x7 ·52m
+                          - generic [ref=e571]: Plot to topple Vijay government? Rs 35 crore claim, 3 arrests and 'DMK link'
+                    - listitem [ref=e572]:
+                      - 'link "Times Now 58m Ram temple donation theft: Cash hid in washrooms to beat CCTV — 10 SIT probe updates" [ref=e573]':
+                        - /url: https://www.msn.com/en-in/news/india/ram-temple-donation-theft-cash-hid-in-washrooms-to-beat-cctv-10-sit-probe-updates/ar-AA26Y3aI
+                        - generic [ref=e574]:
+                          - generic [ref=e575]:
+                            - img [ref=e576]
+                            - generic [ref=e577]:
+                              - generic: Times Now ·58m
+                          - generic [ref=e578]: "Ram temple donation theft: Cash hid in washrooms to beat CCTV — 10 SIT probe updates"
+                    - listitem [ref=e579]:
+                      - 'link "WION now Ketan Agarwal death case: Defence questions evidence against Chetan Chaudhary as police recreate crime scene at Lohagad Fort" [ref=e580]':
+                        - /url: https://www.msn.com/en-in/news/india/ketan-agarwal-death-case-defence-questions-evidence-against-chetan-chaudhary-as-police-recreate-crime-scene-at-lohagad-fort/ar-AA26X2PV
+                        - generic [ref=e581]:
+                          - generic [ref=e582]:
+                            - img [ref=e583]
+                            - generic [ref=e584]:
+                              - generic: WION ·now
+                          - generic [ref=e585]: "Ketan Agarwal death case: Defence questions evidence against Chetan Chaudhary as police recreate crime scene at Lohagad Fort"
+                  - generic [ref=e587]:
+                    - generic [ref=e588]:
+                      - generic "Previous" [ref=e589]:
+                        - button "Previous" [ref=e590]
+                      - tablist [ref=e592]:
+                        - tab "tab-0" [selected] [ref=e593]
+                        - tab "tab-1" [ref=e595]
+                        - tab "tab-2" [ref=e597]
+                      - generic "Next" [ref=e599]:
+                        - button "Next" [ref=e600]
+                    - link "See more" [ref=e602]:
+                      - /url: https://www.msn.com/en-in/channel/topic/Top%20stories/tp-Y_0b495ad3-9beb-45f8-9214-c8e95aa2468f?cvid=de1a73b2dda7462aec54f7a43d08cf73&ocid=BingHp01
+              - article [ref=e603] [cursor=pointer]
+              - 'article "Cardiologist warns: These common foods are silent heart killers — avoid at all costs" [ref=e610] [cursor=pointer]':
+                - generic [ref=e612]:
+                  - img [ref=e613]
+                  - generic [ref=e614]:
+                    - generic [ref=e615]:
+                      - generic [ref=e617]:
+                        - img [ref=e618]
+                        - generic [ref=e619]: The Economic Times
+                      - 'link "Cardiologist warns: These common foods are silent heart killers — avoid at all costs, The Economic Times" [ref=e620]':
+                        - /url: https://www.msn.com/en-in/health/health-news/cardiologist-warns-these-common-foods-are-silent-heart-killers-avoid-at-all-costs/ar-AA1PDvDd
+                        - text: "Cardiologist warns: These common foods are silent heart killers — avoid at all costs"
+                    - 'generic "Cardiologist warns: These common foods are silent heart killers — avoid at all costs" [ref=e624]':
+                      - generic [ref=e626]:
+                        - generic [ref=e627]:
+                          - button "115 Likes" [ref=e628]:
+                            - generic [ref=e629]:
+                              - img [ref=e630]
+                              - generic [ref=e632]: "115"
+                          - button "Dislike" [ref=e633]:
+                            - img [ref=e635]
+                        - link "View comments 2 Comment" [ref=e638]:
+                          - /url: https://www.msn.com/en-in/health/health-news/cardiologist-warns-these-common-foods-are-silent-heart-killers-avoid-at-all-costs/ar-AA1PDvDd#comments
+                          - button "View comments 2 Comment" [ref=e639]:
+                            - img [ref=e640]
+                          - generic [ref=e642]: "2"
+                  - generic [ref=e643]:
+                    - button "Hide this story" [ref=e644]:
+                      - img [ref=e645]
+                      - text: Hide this story
+                    - button "See more" [ref=e646]:
+                      - img [ref=e647]
+              - 'article "Gold prices fall: Biggest monthly drop since 2008. Is this the best time to buy?" [ref=e648] [cursor=pointer]':
+                - generic [ref=e650]:
+                  - img [ref=e651]
+                  - generic [ref=e652]:
+                    - generic [ref=e653]:
+                      - generic [ref=e654]:
+                        - generic [ref=e655]:
+                          - img [ref=e656]
+                          - generic [ref=e657]: India Today
+                        - generic [ref=e658]: ·
+                        - generic [ref=e659]: 1d
+                      - 'link "Gold prices fall: Biggest monthly drop since 2008. Is this the best time to buy?, India Today" [ref=e660]':
+                        - /url: https://www.msn.com/en-in/money/markets/gold-prices-fall-biggest-monthly-drop-since-2008-is-this-the-best-time-to-buy/ar-AA26QMpY
+                        - text: "Gold prices fall: Biggest monthly drop since 2008. Is this the best time to buy?"
+                    - 'generic "Gold prices fall: Biggest monthly drop since 2008. Is this the best time to buy?" [ref=e664]':
+                      - generic [ref=e666]:
+                        - generic [ref=e667]:
+                          - button "188 Likes" [ref=e668]:
+                            - generic [ref=e669]:
+                              - img [ref=e670]
+                              - generic [ref=e672]: "188"
+                          - button "Dislike" [ref=e673]:
+                            - img [ref=e675]
+                        - link "Start the conversation" [ref=e678]:
+                          - /url: https://www.msn.com/en-in/money/markets/gold-prices-fall-biggest-monthly-drop-since-2008-is-this-the-best-time-to-buy/ar-AA26QMpY#comments
+                          - button "Start the conversation" [ref=e679]:
+                            - img [ref=e680]
+                  - generic [ref=e682]:
+                    - button "Hide this story" [ref=e683]:
+                      - img [ref=e684]
+                      - text: Hide this story
+                    - button "See more" [ref=e685]:
+                      - img [ref=e686]
+              - article [ref=e687] [cursor=pointer]
+              - article [ref=e694] [cursor=pointer]:
+                - generic [ref=e700]:
+                  - generic [ref=e702]:
+                    - img "Watchlist suggestions" [ref=e704]
+                    - link "Watchlist suggestions" [ref=e705]:
+                      - /url: https://www.msn.com/en-in/money/watchlist?ocid=BingHp01
+                      - heading "Watchlist suggestions" [level=2] [ref=e706]
+                    - button "More options" [ref=e708]
+                  - generic [ref=e713]:
+                    - link "USD/INR US Dollar/Indian Rupee ‎+0.62%‎ 95.2475" [ref=e715]:
+                      - /url: https://www.msn.com/en-in/money/watchlist?id=avyo8m&ocid=BingHp01
+                      - generic [ref=e716]:
+                        - generic [ref=e718]: USD/INR
+                        - generic [ref=e720]: US Dollar/Indian Rupee
+                      - generic [ref=e725]:
+                        - generic [ref=e726]: ‎+0.62%‎
+                        - generic [ref=e727]: "95.2475"
+                      - button "Add to watchlist" [ref=e730]:
+                        - img [ref=e731]
+                    - link "Silver Silver Dropping fast ‎-2.31%‎ 58.54" [ref=e735]:
+                      - /url: https://www.msn.com/en-in/money/watchlist?id=auvwr7&noti=Price&ocid=BingHp01
+                      - generic [ref=e736]:
+                        - generic [ref=e737]:
+                          - generic [ref=e738]: Silver
+                          - img "Silver" [ref=e739]
+                        - generic [ref=e741]: Dropping fast
+                      - generic [ref=e746]:
+                        - generic [ref=e747]: ‎-2.31%‎
+                        - generic [ref=e748]: "58.54"
+                      - button "Add to watchlist" [ref=e751]:
+                        - img [ref=e752]
+                    - link "ITC Ltd ITC ‎+1.08%‎ 290.05" [ref=e756]:
+                      - /url: https://www.msn.com/en-in/money/watchlist?id=ahie2w&ocid=BingHp01
+                      - generic [ref=e757]:
+                        - generic [ref=e759]: ITC Ltd
+                        - generic [ref=e761]: ITC
+                      - generic [ref=e766]:
+                        - generic [ref=e767]: ‎+1.08%‎
+                        - generic [ref=e768]: "290.05"
+                      - button "Add to watchlist" [ref=e771]:
+                        - img [ref=e772]
+                    - link "Citigroup Inc C ‎-1.78%‎ 139.96" [ref=e776]:
+                      - /url: https://www.msn.com/en-in/money/watchlist?id=a1p3ww&ocid=BingHp01
+                      - generic [ref=e777]:
+                        - generic [ref=e779]: Citigroup Inc
+                        - generic [ref=e781]: C
+                      - generic [ref=e786]:
+                        - generic [ref=e787]: ‎-1.78%‎
+                        - generic [ref=e788]: "139.96"
+                      - button "Add to watchlist" [ref=e791]:
+                        - img [ref=e792]
+                    - link "Dominion Energy Inc D ‎-1.29%‎ 68.29" [ref=e796]:
+                      - /url: https://www.msn.com/en-in/money/watchlist?id=a1qpw7&ocid=BingHp01
+                      - generic [ref=e797]:
+                        - generic [ref=e799]: Dominion Energy Inc
+                        - generic [ref=e801]: D
+                      - generic [ref=e806]:
+                        - generic [ref=e807]: ‎-1.29%‎
+                        - generic [ref=e808]: "68.29"
+                      - button "Add to watchlist" [ref=e811]:
+                        - img [ref=e812]
+                  - generic [ref=e816]:
+                    - generic [ref=e817]:
+                      - generic "Previous" [ref=e818]:
+                        - button "Previous" [ref=e819]
+                      - tablist [ref=e821]:
+                        - tab "tab-0" [selected] [ref=e822]
+                        - tab "tab-1" [ref=e824]
+                        - tab "tab-2" [ref=e826]
+                        - tab "tab-3" [ref=e828]
+                        - tab "tab-4" [ref=e830]
+                        - tab "tab-5"
+                        - tab "tab-6"
+                      - generic "Next" [ref=e832]:
+                        - button "Next" [ref=e833]
+                    - link "See watchlist suggestions" [ref=e835]:
+                      - /url: https://www.msn.com/en-in/money/watchlist?ocid=BingHp01
+    - contentinfo:
+      - generic [ref=e837]:
+        - generic [ref=e838]: © 2026 Microsoft
+        - list [ref=e839]:
+          - listitem [ref=e840]:
+            - link "Privacy and Cookies" [ref=e841] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?LinkId=521839
+          - listitem [ref=e842]:
+            - link "Legal" [ref=e843] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?LinkID=246338
+          - listitem [ref=e844]:
+            - link "Advertise" [ref=e845] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?linkid=868923
+          - listitem [ref=e846]:
+            - link "About our ads" [ref=e847] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?LinkID=286759
+          - listitem [ref=e848]:
+            - link "Help" [ref=e849] [cursor=pointer]:
+              - /url: //support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f
+          - listitem [ref=e850]:
+            - link "Feedback" [ref=e851] [cursor=pointer]:
+              - /url: "#"
+```
+
+# Test source
+
+```ts
+  1  | import {test,expect} from '@playwright/test'
+  2  | 
+  3  | const keyword = {"searchitem":"playwright"};
+  4  | 
+  5  | test('Commands test',async({page})=>{
+  6  | 
+  7  |     await page.goto(process.env.base_url!);
+  8  | 
+  9  |     const title = await page.title();
+  10 |     console.log("Title:",title);
+  11 | 
+  12 |     console.log("-------------------------------------");
+  13 | 
+  14 |     const current_url = page.url();
+  15 |     console.log("Current Url:",current_url);
+  16 | 
+  17 |     console.log("-------------------------------------");
+  18 | 
+  19 |     expect (page).toHaveTitle("Search - Microsoft Bing");
+  20 |     expect (page).toHaveURL("https://www.bing.com/");
+  21 | 
+  22 |     const innercontent = await page.getByRole("link",{name:"Images"}).textContent();
+  23 |     console.log("Inner Text of Images link:",innercontent);
+  24 |     console.log("-------------------------------------");
+  25 | 
+  26 |     console.log("Attributes value of search tab:");
+  27 |     const search = page.locator("//textarea[@name='q']");
+  28 |     console.log("Placeholder:",await search.getAttribute("placeholder"));
+  29 |     console.log("Aria label:",await search.getAttribute("aria-label"));
+  30 |     console.log("Class:",await search.getAttribute("class"));
+  31 |     console.log("Id:",await search.getAttribute("id"));
+  32 |     console.log("Role:",await search.getAttribute("role"));
+  33 |     console.log("-------------------------------------");
+  34 | 
+  35 |     console.log("Search function:");
+> 36 |     await search.click();
+     |                  ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  37 |     await search.fill(keyword.searchitem);
+  38 |     await page.locator("//div[@class='slide wptSld rowSpan4 colSpan5']/child::div[2]/descendant::a[1]").click();
+  39 |     expect(page).toHaveTitle("Playwright");
+  40 |     console("Title:",)
+  41 | 
+  42 | 
+  43 | })
+```

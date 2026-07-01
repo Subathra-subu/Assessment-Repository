@@ -1,0 +1,12 @@
+Title: Search - Microsoft Bing
+-------------------------------------
+Current Url: https://www.bing.com/
+-------------------------------------
+Inner Text of Images link: Images
+-------------------------------------
+Attributes value of search tab:
+Placeholder: Search the web
+Aria label: Enter your search here - Search suggestions will show as you type
+
+
+

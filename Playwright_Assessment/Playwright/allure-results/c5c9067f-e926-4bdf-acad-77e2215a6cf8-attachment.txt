@@ -1,0 +1,15 @@
+Title: Search - Microsoft Bing
+-------------------------------------
+Current Url: https://www.bing.com/
+-------------------------------------
+Inner Text of Images link: Images
+-------------------------------------
+Attributes value of search tab:
+Placeholder: Search the web
+Aria label: Enter your search here - Search suggestions will show as you type
+Class: sb_form_q hp_fadein_ph hp_fadein_show
+Id: sb_form_q
+Role: combobox
+-------------------------------------
+Search function:
+Title: playwright - Search

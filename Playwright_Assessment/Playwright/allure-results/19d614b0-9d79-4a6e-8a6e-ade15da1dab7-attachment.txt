@@ -1,0 +1,5 @@
+Title: Search - Microsoft Bing
+-------------------------------------
+Current Url: https://www.bing.com/
+-------------------------------------
+Inner Text of Images link: [AsyncFunction: innerText]

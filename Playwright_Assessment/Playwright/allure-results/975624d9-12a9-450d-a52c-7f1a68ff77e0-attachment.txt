@@ -1,0 +1,10 @@
+Title: Search - Microsoft Bing
+-------------------------------------
+Current Url: https://www.bing.com/
+-------------------------------------
+Inner Text of Images link: Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 4118,
+  [Symbol(trigger_async_id_symbol)]: 3752,
+  [Symbol(kResourceStore)]: undefined
+}
