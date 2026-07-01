@@ -1,8 +1,8 @@
 {
     "firtsname": "Emily",
     "lastname": "Davis",
-    "email":"emily@yahoo.com",
+    "email":"emi@yahoo.com",
     "telephone":"9087654321",
-    "password":"emil",
-    "confirmpassword":"emil"
+    "password":"emily",
+    "confirmpassword":"emily"
 }
