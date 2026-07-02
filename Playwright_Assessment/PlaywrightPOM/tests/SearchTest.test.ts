@@ -1,8 +1,19 @@
-import {test,expect} from '../Fixture/BaseFixture'
+import { expect } from '@playwright/test';
+import { test } from "../Fixture/BaseFixture"
+import SearchData from '../TestData/SearchData.json'
 
-test('Search Test @smoke',async({accountPage,searchPage,productPage})=>{
-    await accountPage.navigate();
-    await accountPage.searchProduct('MacBook');
-    await searchPage.productSelect();
-    await expect(productPage.productTitle).toHaveText('MacBook');
+test.describe("Search Product @smoke",()=>{
+
+    test.beforeEach("Before Search @smoke", async({accountPage})=>{
+        await accountPage.navigate()
+    })
+
+    test("search product @smoke", async({accountPage,searchPage})=>{
+        await accountPage.searchProduct(SearchData.searchitem);
+        const products = await searchPage.listProduct();
+        const listP = await products.allInnerTexts();
+        for(var pro of listP)
+            expect(pro).toContain(SearchData.searchitem)
+    })
+
 })

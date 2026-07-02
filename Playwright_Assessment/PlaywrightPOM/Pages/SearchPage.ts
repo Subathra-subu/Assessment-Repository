@@ -1,14 +1,17 @@
-import {test,expect, Page, Locator} from '@playwright/test'
+import {Page, Locator} from "@playwright/test"
 
 export class SearchPage{
-    readonly page:Page
-    readonly product:Locator
+    readonly page: Page
+    readonly proList: Locator
+    
+    constructor(page: Page){
+        this.page = page
+        this.proList = page.locator("//h4")
+        
+    }
 
-    constructor(page:Page){
-        this.page=page;
-        this.product=page.locator('div.product-thumb');
+    async listProduct(){
+        return this.proList
     }
-    async productSelect(){
-        await this.page.getByRole("link",{name:'MacBook'}).first().click();
-    }
+
 }
