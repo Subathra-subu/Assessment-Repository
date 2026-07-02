@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test":"npx playwright test",
-    "test:uat":"cross-env ENV=uat npx playwright test"
+    "test": "npx playwright test",
+    "test:uat": "cross-env ENV=uat npx playwright test"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "allure-playwright": "^3.10.2",
+    "csv-parse": "^7.0.0",
     "dotenv": "^17.4.2"
   }
 }

@@ -5,12 +5,14 @@ export class AccountPage{
     readonly page: Page;
     readonly accountMenu: Locator;
     readonly registerLink: Locator;
+    readonly loginLink: Locator;
     readonly successMessage:Locator;
 
     constructor(page:Page){
         this.page = page;
         this.accountMenu = page.locator(".caret");
         this.registerLink=page.locator("//a[text()='Register']");
+        this.loginLink=page.getByRole("link",{name:"Login"})
         this.successMessage=page.locator("//h1[text()='Your Account Has Been Created!']");
     }
 
@@ -24,5 +26,8 @@ export class AccountPage{
 
     async clickRegisterLink(){
         await this.registerLink.click();
+    }
+    async clickLoginLink(){
+        await this.loginLink.click()
     }
 }
