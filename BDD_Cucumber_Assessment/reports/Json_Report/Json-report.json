@@ -1,0 +1,326 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "subathra_08-07-2026_login-functionality;login-test-with-multipleinputs",
+        "keyword": "Scenario Outline",
+        "line": 13,
+        "name": "Login Test with multipleInputs",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 403880499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user launches the DemoWebShop website",
+            "match": {
+              "location": "src\\test\\steps\\registerStep.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4598262899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the clicks the Login link",
+            "match": {
+              "location": "src\\test\\steps\\loginStep.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18771100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the user enters the email as \"emilydavis@gamil.com\" and password as \"emilyda\"",
+            "match": {
+              "location": "src\\test\\steps\\loginStep.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82390800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the user clicks the login button",
+            "match": {
+              "location": "src\\test\\steps\\loginStep.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14083800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the user should see the appropriate message as \"Log out\" based on the input type as \"valid\"",
+            "match": {
+              "location": "src\\test\\steps\\loginStep.ts:24"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5068010000,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (D:\\BDD_Cucumber_Assessment\\node_modules\\@cucumber\\cucumber\\src\\time.ts:50:14)\n    at listOnTimeout (node:internal/timers:588:17)\n    at processTimers (node:internal/timers:523:7)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 183891999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "subathra_08-07-2026_login-functionality;login-test-with-multipleinputs",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Login Test with multipleInputs",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 319884099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user launches the DemoWebShop website",
+            "match": {
+              "location": "src\\test\\steps\\registerStep.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3766283199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the clicks the Login link",
+            "match": {
+              "location": "src\\test\\steps\\loginStep.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6353200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the user enters the email as \"sha@gmail.com\" and password as \"123456\"",
+            "match": {
+              "location": "src\\test\\steps\\loginStep.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10455300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the user clicks the login button",
+            "match": {
+              "location": "src\\test\\steps\\loginStep.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5791600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the user should see the appropriate message as \"The credentials provided are incorrect\" based on the input type as \"invalid\"",
+            "match": {
+              "location": "src\\test\\steps\\loginStep.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1952392099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 127889299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "subathra_08-07-2026_login-functionality",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Subathra_08-07-2026_Login Functionality",
+    "tags": [
+      {
+        "name": "@login",
+        "line": 1
+      }
+    ],
+    "uri": "src\\test\\features\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "subathra_08-07-2026_register-functionality;regsiter-with-valid-details",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Regsiter with valid details",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 319969000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user launches the DemoWebShop website",
+            "match": {
+              "location": "src\\test\\steps\\registerStep.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3891001000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the clicks the register link",
+            "match": {
+              "location": "src\\test\\steps\\registerStep.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 648899299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the user enters the valid details from csv file",
+            "match": {
+              "location": "src\\test\\steps\\registerStep.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 537436000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the user clicks the register button",
+            "match": {
+              "location": "src\\test\\steps\\registerStep.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 940762900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the user should see the successfully registered message",
+            "match": {
+              "location": "src\\test\\steps\\registerStep.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 157791900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 163887799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@register",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "subathra_08-07-2026_register-functionality",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Subathra_08-07-2026_Register Functionality",
+    "tags": [
+      {
+        "name": "@register",
+        "line": 1
+      }
+    ],
+    "uri": "src\\test\\features\\register.feature"
+  }
+]
